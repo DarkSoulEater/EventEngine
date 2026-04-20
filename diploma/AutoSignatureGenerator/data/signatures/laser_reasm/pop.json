@@ -1,0 +1,38 @@
+{
+  "Params": {
+    "target": "pop",
+    "algorithm": "LASER",
+    "getInversed": "true",
+    "reassembly": "true",
+    "saveBySequentialPackets": "true",
+    "constraintType": "packet",
+    "constraintValue": "5",
+    "refinement": "true",
+    "sizeThreshold": "300000",
+    "minTotalSize": "8",
+    "minSubstringLength": "3",
+    "minSubstringCount": "2"
+  },
+  "Signatures": [
+    {
+      "#1": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 8 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "UEFTUyA=" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "NA0K" }
+        ]
+      ]
+    },
+    {
+      "#2": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 8 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "UEFTUyA=" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "NA0K" }
+        ]
+      ]
+    }
+  ]
+}

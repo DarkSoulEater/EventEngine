@@ -1,0 +1,28 @@
+\documentclass[a4paper, openany, 12pt]{article}
+
+%% подключаем стандарт библиографии
+\bibliographystyle{ugost2008l}
+
+%% подключаем преамбулу, в ней содержатся подключение всех необходимых пакетов
+\input{include/preambule.tex}
+
+\begin{document}
+    %% титульник
+    \input{include/title.tex}
+    %% аннотоция
+%    \input{parts/Annotation.tex}
+    %содержание
+    \tableofcontents{}
+    \newpage
+
+    \input{parts/Section0.tex} %% Введение
+    \input{parts/Section1.tex} %% Постановка задачи
+    \input{parts/Section2_BuildSolution.tex} %% Обзор существующих решений
+    \input{parts/Section3.tex} %% Исследование и построение решения задачи
+    \input{parts/Section4.tex} %% Описание практической части
+%    \input{parts/Section5.tex} %% Заключение
+
+    %% Don't change the following lines
+    \nocite{*}
+    \bibliography{references}
+\end{document}

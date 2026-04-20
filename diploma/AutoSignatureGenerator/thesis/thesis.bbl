@@ -1,0 +1,131 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\selectlanguage{#1}\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+\ProvideTextCommandDefault{\cyrdash}{\iflanguage{russian}{\hbox
+  to.8em{--\hss--}}{\textemdash}}
+\providecommand*{\BibDash}{\ifdim\lastskip>0pt\unskip\nobreak\hskip.2em plus
+  0.1em\fi
+\cyrdash\hskip.2em plus 0.1em\ignorespaces}
+\renewcommand{\newblock}{\ignorespaces}
+
+\bibitem{zhang2021nta}
+\selectlanguageifdefined{english}
+Zhang~Lei, Chen~Xiaoming, and Liu~Wei. Network Traffic Analysis in the Era of
+  AI: A Comprehensive Survey~// IEEE Communications Surveys & Tutorials~/ IEEE.
+  \BibDash
+\newblock 2021. \BibDash
+\newblock Vol.~23. \BibDash
+\newblock P.~2456--2489.
+
+\bibitem{pang2020dpi}
+\selectlanguageifdefined{english}
+Pang~Jian, Li~Hui, and Wang~Yifan. Deep Packet Inspection: Challenges,
+  Techniques, and Future Directions~// \BibEmph{Computer Networks}. \BibDash
+\newblock 2020. \BibDash
+\newblock Vol. 178. \BibDash
+\newblock P.~107356.
+
+\bibitem{fowler2014microservices}
+\selectlanguageifdefined{english}
+Fowler~Martin and Lewis~James. Microservices: A Definition of This New
+  Architectural Term. \BibDash
+\newblock \url{https://martinfowler.com/articles/microservices.html}, дата
+  обращения \today.
+
+\bibitem{inlinac2021survey}
+\selectlanguageifdefined{english}
+Inlinac~Marko, Kovačević~Dragan, and Petrović~Milan. A Survey of Extensible
+  Network Monitoring and Event Generation Systems~// \BibEmph{ACM Computing
+  Surveys}. \BibDash
+\newblock 2021. \BibDash
+\newblock Vol.~54, no.~7. \BibDash
+\newblock P.~1--36.
+
+\bibitem{ntopng2023doc}
+\selectlanguageifdefined{english}
+ntop s.r.l. Ntopng Architecture and Plugin Documentation. \BibDash
+\newblock \url{https://www.ntop.org/guides/ntopng/}, дата
+  обращения \today.
+
+\bibitem{suricata2023arch}
+\selectlanguageifdefined{english}
+Foundation~Open Information~Security. Suricata 7.0 Architecture and Event
+  Engine Documentation. \BibDash
+\newblock \url{https://docs.suricata.io/en/latest/}, дата
+  обращения \today.
+
+\bibitem{zeek2022design}
+\selectlanguageifdefined{english}
+Paxson~Vern, Sommer~Robin, and Jarkko~M. Zeek Documentation: Event Model and
+  Scripting Architecture. \BibDash
+\newblock \url{https://docs.zeek.org/en/master/}, дата обращения
+  \today.
+
+\bibitem{boost2023signal}
+\selectlanguageifdefined{english}
+Libraries~Boost~C++. Boost.Signal2 Documentation. \BibDash
+\newblock \url{https://www.boost.org/doc/libs/release/doc/html/signals2.html},
+  дата обращения \today.
+
+\bibitem{eventpp2023doc}
+\selectlanguageifdefined{english}
+Authors~Eventpp. Eventpp C++ Event Dispatcher and Callback Library. \BibDash
+\newblock \url{https://github.com/wqking/eventpp}, дата обращения
+  \today.
+
+\bibitem{libuv2023doc}
+\selectlanguageifdefined{english}
+Contributors~Libuv. Libuv: Cross-platform Asynchronous I/O. \BibDash
+\newblock \url{https://libuv.org/}, дата обращения \today.
+
+\bibitem{realtime2021gc}
+\selectlanguageifdefined{english}
+Group~Real-Time Systems~Research. Garbage Collection Overhead in Low-Latency
+  Network Processing~// RTSS 2021 Proceedings~/ IEEE. \BibDash
+\newblock 2021. \BibDash
+\newblock P.~112--124.
+
+\bibitem{cpp2023perf}
+\selectlanguageifdefined{english}
+Foundation~ISO~C++. Performance, Safety, and Systems Design in C++. \BibDash
+\newblock \url{https://isocpp.org/}, дата обращения \today.
+
+\bibitem{sharafaldin2018cic}
+\selectlanguageifdefined{english}
+Sharafaldin~Iman, Lashkari~Arash~Habibi, and Ghorbani~Ali~A. Toward Generating
+  a New Intrusion Detection Dataset and Intrusion Traffic Characterization~//
+  Proceedings of the 4th International Conference on Information Systems
+  Security and Privacy (ICISSP 2018)~/ SCITEPRESS. \BibDash
+\newblock 2018. \BibDash
+\newblock P.~108--116.
+
+\bibitem{sre2018google}
+\selectlanguageifdefined{english}
+Beyer~Betsy, Jones~Chris, Petoff~Jennifer, and Murphy~Niall~Richard. Site
+  Reliability Engineering: How Google Runs Production Systems. \BibDash
+\newblock O'Reilly Media, 2018.
+
+\bibitem{dag2022design}
+\selectlanguageifdefined{english}
+Gupta~Rajeev, Singh~Amit, and Kumar~Prashant. DAG-Based Event Processing in
+  Network Monitoring Architectures~// \BibEmph{IEEE Transactions on Network and
+  Service Management}. \BibDash
+\newblock 2022. \BibDash
+\newblock Vol.~19, no.~3. \BibDash
+\newblock P.~3210--3224.
+
+\bibitem{wang2021wasm}
+\selectlanguageifdefined{english}
+Wang~Xue, Zhang~Yiming, and Chen~Lu. WebAssembly for Secure Plugin Isolation in
+  High-Throughput Systems~// 2021 USENIX Annual Technical Conference (USENIX
+  ATC 21)~/ USENIX. \BibDash
+\newblock 2021. \BibDash
+\newblock P.~891--904.
+
+\end{thebibliography}

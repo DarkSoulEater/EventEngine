@@ -1,0 +1,663 @@
+{
+  "Params": {
+    "target": "dns",
+    "algorithm": "LASER",
+    "getInversed": "true",
+    "reassembly": "true",
+    "saveBySequentialPackets": "true",
+    "constraintType": "packet",
+    "constraintValue": "5",
+    "refinement": "true",
+    "sizeThreshold": "300000",
+    "minTotalSize": "8",
+    "minSubstringLength": "3",
+    "minSubstringCount": "2"
+  },
+  "Signatures": [
+    {
+      "#1": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 14 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "bWFp" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAABAAE=" }
+        ]
+      ]
+    },
+    {
+      "#2": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 34 },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAAAA==" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAABAAE=" },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAAAA==" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "A25ldAAAAQAB" }
+        ]
+      ]
+    },
+    {
+      "#3": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 8 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "b3Vk" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAABAAE=" }
+        ]
+      ]
+    },
+    {
+      "#4": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 70 },
+          { "Length": 25, "Offset":  0, "Depth": -1, "Substring": "gYAAAQABAAAAABBvbmVkc2NvbHByZHd1cw==" },
+          { "Length": 40, "Offset":  0, "Depth": -1, "Substring": "Bndlc3R1cwhjbG91ZGFwcAVhenVyZQNjb20AAAEAAcAMAAEAAQAAAA==" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAQUva0=" }
+        ]
+      ]
+    },
+    {
+      "#5": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 19 },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "Zy1ucy0x" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "CWF3c2Rucy0=" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAABAAE=" }
+        ]
+      ]
+    },
+    {
+      "#6": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 12 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "cmNoAAABAAEA" }
+        ]
+      ]
+    },
+    {
+      "#7": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 12 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "A2NvbQAAAQAB" }
+        ]
+      ]
+    },
+    {
+      "#8": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 5, "Total length": 22 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "A25ldAAAAQAB" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AAAAAA==" }
+        ]
+      ]
+    },
+    {
+      "#9": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 11 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAAAAAA=" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAB" }
+        ]
+      ]
+    },
+    {
+      "#10": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 23 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "A2NvbQAAAQAB" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAA=" }
+        ]
+      ]
+    },
+    {
+      "#11": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 13 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AAEAAQ==" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "A2NvbQAAAQAB" }
+        ]
+      ]
+    },
+    {
+      "#12": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 20 },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAAAA==" },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "ZQNjb20AAAEAAQ==" }
+        ]
+      ]
+    },
+    {
+      "#13": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 5, "Total length": 22 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAEA" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AAAAAA==" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "A2NvbQAAAQAB" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAEA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" }
+        ]
+      ]
+    },
+    {
+      "#14": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 13 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AAABAA==" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAB" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" }
+        ]
+      ]
+    },
+    {
+      "#15": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 11 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "HAABAAA=" }
+        ]
+      ]
+    },
+    {
+      "#16": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 48 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AQAAAQ==" },
+          { "Length": 40, "Offset":  0, "Depth": -1, "Substring": "JWt1YmV0YWwtcG9zdGdyZXNxbC1wb3N0Z3Jlc3FsLW1ldHJpY3MAAA==" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AAEAAA==" }
+        ]
+      ]
+    },
+    {
+      "#17": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 8 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAAAAAA=" }
+        ]
+      ]
+    },
+    {
+      "#18": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 45 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AQAAAA==" },
+          { "Length": 41, "Offset":  0, "Depth": -1, "Substring": "ASVrdWJldGFsLXBvc3RncmVzcWwtcG9zdGdyZXNxbC1tZXRyaWNzAAA=" }
+        ]
+      ]
+    },
+    {
+      "#19": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 51 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AQAAAA==" },
+          { "Length": 47, "Offset":  0, "Depth": -1, "Substring": "AAEla3ViZXRhbC1wb3N0Z3Jlc3FsLXBvc3RncmVzcWwtbWV0cmljcwAAHAABAAA=" }
+        ]
+      ]
+    },
+    {
+      "#20": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 42 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AQAAAA==" },
+          { "Length": 14, "Offset":  0, "Depth": -1, "Substring": "AAAQb25lZHNjb2xwcmQ=" },
+          { "Length": 24, "Offset":  0, "Depth": -1, "Substring": "CGNsb3VkYXBwBWF6dXJlA2NvbQAAHAAB" }
+        ]
+      ]
+    },
+    {
+      "#21": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 13 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AQAAAA==" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "A2NvbQAAHAAB" }
+        ]
+      ]
+    },
+    {
+      "#22": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 45 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AQAAAA==" },
+          { "Length": 41, "Offset":  0, "Depth": -1, "Substring": "ASVrdWJldGFsLXBvc3RncmVzcWwtcG9zdGdyZXNxbC1tZXRyaWNzAAA=" }
+        ]
+      ]
+    },
+    {
+      "#23": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 9 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" }
+        ]
+      ]
+    },
+    {
+      "#24": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 12 },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "A2NvbQAA" }
+        ]
+      ]
+    },
+    {
+      "#25": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 8 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAAAAAA=" }
+        ]
+      ]
+    },
+    {
+      "#26": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 9 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAAAAAAA" }
+        ]
+      ]
+    },
+    {
+      "#27": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 17 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAAAAAAB" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AQAAKQ==" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AAAAAA==" }
+        ]
+      ]
+    },
+    {
+      "#28": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 51 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AQAAAA==" },
+          { "Length": 47, "Offset":  0, "Depth": -1, "Substring": "AAEla3ViZXRhbC1wb3N0Z3Jlc3FsLXBvc3RncmVzcWwtbWV0cmljcwAAHAABAAA=" }
+        ]
+      ]
+    },
+    {
+      "#29": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 8 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AQAAAA==" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "HAABAA==" }
+        ]
+      ]
+    },
+    {
+      "#30": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 20 },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "AAABAAAAAAA=" },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": "AAABAAEAAA==" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAAAAAA=" }
+        ]
+      ]
+    },
+    {
+      "#31": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 24 },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAAAQ==" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "AAABAAEAACk=" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" }
+        ]
+      ]
+    },
+    {
+      "#32": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 9 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "HAAB" }
+        ]
+      ]
+    },
+    {
+      "#33": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 15 },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAAcAAEA" }
+        ]
+      ]
+    },
+    {
+      "#34": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 12 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AAAAAA==" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "HAABAAA=" }
+        ]
+      ]
+    },
+    {
+      "#35": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 9 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAAAAAAB" }
+        ]
+      ]
+    },
+    {
+      "#36": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 20 },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAAAQ==" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AQAAKQ==" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAAAAAAA" }
+        ]
+      ]
+    },
+    {
+      "#37": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 28 },
+          { "Length": 15, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAAAQJwZwAA" },
+          { "Length": 13, "Offset":  0, "Depth": -1, "Substring": "AAEAACkIAAAAgAAAAA==" }
+        ]
+      ]
+    },
+    {
+      "#38": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 13 },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAA" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AAABAA==" }
+        ]
+      ]
+    },
+    {
+      "#39": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 9 },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" }
+        ]
+      ]
+    },
+    {
+      "#40": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 8 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAAAAAA=" }
+        ]
+      ]
+    },
+    {
+      "#41": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 20 },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAAAQ==" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AQAAKQ==" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAAAAAAA" }
+        ]
+      ]
+    },
+    {
+      "#42": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 15 },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAABAAEA" }
+        ]
+      ]
+    },
+    {
+      "#43": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 14 },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "AAABAAAAAAA=" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAABAAEA" }
+        ]
+      ]
+    },
+    {
+      "#44": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 18 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "A2NvbQAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAAAAAAA" }
+        ]
+      ]
+    },
+    {
+      "#45": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 9 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "A2NvbQAA" }
+        ]
+      ]
+    },
+    {
+      "#46": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 15 },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAABAAEA" }
+        ]
+      ]
+    },
+    {
+      "#47": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 15 },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAABAAEA" }
+        ]
+      ]
+    },
+    {
+      "#48": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 15 },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAABAAEA" }
+        ]
+      ]
+    },
+    {
+      "#49": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 9 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AQAAAA==" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "HAABAAA=" }
+        ]
+      ]
+    },
+    {
+      "#50": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 12 },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AQAAAAAA" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AAABAAEA" }
+        ]
+      ]
+    },
+    {
+      "#51": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 8 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAAAAAA=" }
+        ]
+      ]
+    },
+    {
+      "#52": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 26 },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "AQAAAQAAAAAAAQ==" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "bQAA" },
+          { "Length": 13, "Offset":  0, "Depth": -1, "Substring": "AAEAACkPoAAAAAAAAA==" }
+        ]
+      ]
+    },
+    {
+      "#53": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 8 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAA" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAAAAAA=" }
+        ]
+      ]
+    },
+    {
+      "#54": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 9 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "AAEAAAA=" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "Y29tAA==" }
+        ]
+      ]
+    },
+    {
+      "#55": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 11, "Total length": 733 },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "gaMAAQAAAAYAAQ==" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "AQAABgABAAFR" },
+          { "Length": 74, "Offset":  0, "Depth": -1, "Substring": "AEABYQxyb290LXNlcnZlcnMDbmV0AAVuc3RsZAx2ZXJpc2lnbi1ncnMDY29tAHikZ2wAAAcIAAADhAAJOoAAAVGAAAAuAAEAAVE=" },
+          { "Length": 285, "Offset":  0, "Depth": -1, "Substring": "ARMABggAAAFRgGYeBdBmDNRAFe0ATTrS8PJ7RF/6NK3gc6s2oYJdVvqkBt/9Z7SmRIaYkH5vN4VNhIHDfYUDzA/CRRadqtlq/8hfc5kiNe0/t/po/4zHGRNlMwla/01EVEn6kNN/4x2hg9xItU+LC3m0lNUVAlZJ5PJuKDiQbK6o4vSaHMEBYv5o5bVz5r94GS2ppDKS43WlrEC56+Qbbl9YOHq1UgD2z+mJUrD2Jztz2IzRzeQE5PdHMwORvcZfRAVqQvo+8TYm9NzDbcw1SeNt5VWH5nJvmuDG7XfARyfC0ZybN81Rn/FwPgQBD4GamEo/GprE1GkRsd3Sx7mYPHqXx8iwDWCUkdQxe8VRsGUIY3TKiAAALwABAAFR" },
+          { "Length": 25, "Offset":  0, "Depth": -1, "Substring": "AA8DYWFhAAAIIgAAAAADgAEAAC4AAQABUQ==" },
+          { "Length": 277, "Offset":  0, "Depth": -1, "Substring": "ARMALwgAAAFRgGYeBdBmDNRAFe0AiSnzKQ7Ji5XF97/1GDWLXVoo2zXJZ8yABJLakVgX6lmUi/s8zGhcTxNc4yLJp5GlmtgqrWovDMlTwa8yl5DbrFEIL56FJZoNalrtCKBPbfS2HzmodJnOJAZ5fY54ILqjpAS69Gi+ixtT17+/ROIVUaSLFz6HSkaTFKpS6ikX4fwqLqm3N0ZnY7G86/L1XNMGngMSx8TcEX/ddLwWYl2SqJYn/Gx9ewuYZ94EaxH0j1z2d07K+Oi88PSy0PX2NxeL6HdaVhugjAl3sI1MPrQbTEi+erSiT7l4RCygkqTXOwpoqmBTORhXGbqJzcIvUBcizmQ94p/uvLJ0AjypeL/UJQ==" },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": "AAAvAAEAAQ==" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "BiAAAAAAE8I=" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AC4AAQAB" },
+          { "Length": 21, "Offset":  0, "Depth": -1, "Substring": "ARMALwgBAAFRgGYeBdBmDNRAFe0A" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": "AAApAgAAAIAAAAA=" }
+        ]
+      ]
+    },
+    {
+      "#56": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 11 },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "AAEAAAABAAE=" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AQAB" }
+        ]
+      ]
+    },
+    {
+      "#57": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 11, "Total length": 735 },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "gaMAAQAAAAYAAQ==" },
+          { "Length": 13, "Offset":  0, "Depth": -1, "Substring": "AAABAAEAAAYAAQABUQ==" },
+          { "Length": 74, "Offset":  0, "Depth": -1, "Substring": "AEABYQxyb290LXNlcnZlcnMDbmV0AAVuc3RsZAx2ZXJpc2lnbi1ncnMDY29tAHikZ2wAAAcIAAADhAAJOoAAAVGAAAAuAAEAAVE=" },
+          { "Length": 285, "Offset":  0, "Depth": -1, "Substring": "ARMABggAAAFRgGYeBdBmDNRAFe0ATTrS8PJ7RF/6NK3gc6s2oYJdVvqkBt/9Z7SmRIaYkH5vN4VNhIHDfYUDzA/CRRadqtlq/8hfc5kiNe0/t/po/4zHGRNlMwla/01EVEn6kNN/4x2hg9xItU+LC3m0lNUVAlZJ5PJuKDiQbK6o4vSaHMEBYv5o5bVz5r94GS2ppDKS43WlrEC56+Qbbl9YOHq1UgD2z+mJUrD2Jztz2IzRzeQE5PdHMwORvcZfRAVqQvo+8TYm9NzDbcw1SeNt5VWH5nJvmuDG7XfARyfC0ZybN81Rn/FwPgQBD4GamEo/GprE1GkRsd3Sx7mYPHqXx8iwDWCUkdQxe8VRsGUIY3TKiAAALwABAAFR" },
+          { "Length": 25, "Offset":  0, "Depth": -1, "Substring": "AA8DYWFhAAAIIgAAAAADgAEAAC4AAQABUQ==" },
+          { "Length": 277, "Offset":  0, "Depth": -1, "Substring": "ARMALwgAAAFRgGYeBdBmDNRAFe0AiSnzKQ7Ji5XF97/1GDWLXVoo2zXJZ8yABJLakVgX6lmUi/s8zGhcTxNc4yLJp5GlmtgqrWovDMlTwa8yl5DbrFEIL56FJZoNalrtCKBPbfS2HzmodJnOJAZ5fY54ILqjpAS69Gi+ixtT17+/ROIVUaSLFz6HSkaTFKpS6ikX4fwqLqm3N0ZnY7G86/L1XNMGngMSx8TcEX/ddLwWYl2SqJYn/Gx9ewuYZ94EaxH0j1z2d07K+Oi88PSy0PX2NxeL6HdaVhugjAl3sI1MPrQbTEi+erSiT7l4RCygkqTXOwpoqmBTORhXGbqJzcIvUBcizmQ94p/uvLJ0AjypeL/UJQ==" },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": "AAAvAAEAAQ==" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "BiAAAAAAE8I=" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "AC4AAQAB" },
+          { "Length": 21, "Offset":  0, "Depth": -1, "Substring": "ARMALwgBAAFRgGYeBdBmDNRAFe0A" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "KQIAAACAAAAA" }
+        ]
+      ]
+    },
+    {
+      "#58": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 5, "Total length": 23 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "gYAAAQA=" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "dQAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAHA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAEA" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "KQIAAAAAAAAA" }
+        ]
+      ]
+    },
+    {
+      "#59": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 20 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAEA" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "Y29tAAABAAE=" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "KQIAAAAAAAAA" }
+        ]
+      ]
+    }
+  ]
+}

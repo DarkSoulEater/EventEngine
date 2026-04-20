@@ -1,0 +1,639 @@
+{
+  "Params": {
+    "target": "http",
+    "algorithm": "LCS",
+    "getInversed": "true",
+    "reassembly": "true",
+    "saveBySequentialPackets": "false",
+    "constraintType": "payload",
+    "constraintValue": "7500",
+    "refinement": "true",
+    "minTotalSize": "8",
+    "minSubstringLength": "3",
+    "minSubstringCount": "2"
+  },
+  "Signatures" : [
+    {
+      "#1": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 19 },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": "P/1.1\r\n" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "keep-alive\r\n" }
+        ]
+      ]
+    },
+    {
+      "#2": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 35 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: " },
+          { "Length": 13, "Offset":  0, "Depth": -1, "Substring": "Mozilla/5.0 (" }
+        ]
+      ]
+    },
+    {
+      "#3": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 9, "Total length": 84 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: " },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "Encoding: " },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": "deflate" },
+          { "Length": 22, "Offset":  0, "Depth": -1, "Substring": "P/1.1 200 OK\r\nServer: " },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": ", 2" },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": " Mar 2022 " },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "Cont" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "Type: " }
+        ]
+      ]
+    },
+    {
+      "#4": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 9, "Total length": 70 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": " HTTP/1." },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "\r\nHost: " },
+          { "Length": 14, "Offset":  0, "Depth": -1, "Substring": ": keep-alive\r\n" },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": "Agent: " },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "\r\nAccept" },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": "Mar 202" },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": " 13:50:" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "GMT\r\nCon" }
+        ]
+      ]
+    },
+    {
+      "#5": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 10 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": ".1\r\nCon" }
+        ]
+      ]
+    },
+    {
+      "#6": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 34 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "User-Agent: " },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "P/1.1 20" }
+        ]
+      ]
+    },
+    {
+      "#7": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 10 },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": "P/1.1\r\n" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "t: " }
+        ]
+      ]
+    },
+    {
+      "#8": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 20 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": ".1\r\n" },
+          { "Length": 13, "Offset":  0, "Depth": -1, "Substring": "Mozilla/5.0 (" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" }
+        ]
+      ]
+    },
+    {
+      "#9": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 5, "Total length": 59 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: " },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "P/1.1 " },
+          { "Length": 27, "Offset":  0, "Depth": -1, "Substring": "Date: Tue, 29 Mar 2022 11:4" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": " GMT\r\n" }
+        ]
+      ]
+    },
+    {
+      "#10": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 30 },
+          { "Length": 25, "Offset":  0, "Depth": -1, "Substring": "User-Agent: Mozilla/5.0 (" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "Gecko" }
+        ]
+      ]
+    },
+    {
+      "#11": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 21, "Total length": 154 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "t: " },
+          { "Length": 25, "Offset":  0, "Depth": -1, "Substring": "User-Agent: Mozilla/5.0 (" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "\r\nAccept" },
+          { "Length": 14, "Offset":  0, "Depth": -1, "Substring": "Encoding: gzip" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "P/1.1" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "OK\r\n" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "ate" },
+          { "Length": 16, "Offset":  0, "Depth": -1, "Substring": "\r\nContent-Type: " },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "tion" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "HTTP/1.1" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "P/1.1" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "OK\r\n" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "ate" },
+          { "Length": 16, "Offset":  0, "Depth": -1, "Substring": "\r\nContent-Type: " },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "HTTP/1.1" }
+        ]
+      ]
+    },
+    {
+      "#12": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 6, "Total length": 52 },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "HTTP/1.1\r\n" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "OK\r\nServer: " },
+          { "Length": 15, "Offset":  0, "Depth": -1, "Substring": "Mar 2022 13:16:" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": " GMT\r\n" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "ont" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "Type: " }
+        ]
+      ]
+    },
+    {
+      "#13": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 22 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: " }
+        ]
+      ]
+    },
+    {
+      "#14": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 13 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "P/1.1" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "GMT\r\nCon" }
+        ]
+      ]
+    },
+    {
+      "#15": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 43 },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": "P/1.1\r\n" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "t: " },
+          { "Length": 27, "Offset":  0, "Depth": -1, "Substring": "Date: Tue, 29 Mar 2022 13:1" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": " GMT\r\n" }
+        ]
+      ]
+    },
+    {
+      "#16": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 16 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" }
+        ]
+      ]
+    },
+    {
+      "#17": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 31 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: " },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "User-" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "gent: " }
+        ]
+      ]
+    },
+    {
+      "#18": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 42 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: " },
+          { "Length": 20, "Offset":  0, "Depth": -1, "Substring": "Wed, 11 May 2022 11:" }
+        ]
+      ]
+    },
+    {
+      "#19": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 6, "Total length": 36 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "t: " },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "User-" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "gent: " },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "\r\nAccept" }
+        ]
+      ]
+    },
+    {
+      "#20": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 13 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": " HTTP/1." }
+        ]
+      ]
+    },
+    {
+      "#21": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 16 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": " HTTP/1." },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "t: " }
+        ]
+      ]
+    },
+    {
+      "#22": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 20 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "Host: " }
+        ]
+      ]
+    },
+    {
+      "#23": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 6, "Total length": 52 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "P/1.1 " },
+          { "Length": 20, "Offset":  0, "Depth": -1, "Substring": "Wed, 11 May 2022 11:" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": " GMT\r\nCon" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" }
+        ]
+      ]
+    },
+    {
+      "#24": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 8 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" }
+        ]
+      ]
+    },
+    {
+      "#25": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 26 },
+          { "Length": 14, "Offset":  0, "Depth": -1, "Substring": "T / HTTP/1.1\r\n" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "User-Agent: " }
+        ]
+      ]
+    },
+    {
+      "#26": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 5, "Total length": 45 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length": 25, "Offset":  0, "Depth": -1, "Substring": "User-Agent: Mozilla/5.0 (" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "://" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" }
+        ]
+      ]
+    },
+    {
+      "#27": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 5, "Total length": 52 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: " },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "P/1.1 " },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "OK\r\n" },
+          { "Length": 20, "Offset":  0, "Depth": -1, "Substring": "Wed, 11 May 2022 11:" }
+        ]
+      ]
+    },
+    {
+      "#28": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 8, "Total length": 173 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 15, "Offset":  0, "Depth": -1, "Substring": "Encoding: gzip," },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "deflate\r\n" },
+          { "Length": 66, "Offset":  0, "Depth": -1, "Substring": "HTTP/1.1 200 OK\r\nServer: nginx/1.20.1\r\nDate: Wed, 11 May 2022 11:2" },
+          { "Length": 20, "Offset":  0, "Depth": -1, "Substring": " GMT\r\nContent-Type: " },
+          { "Length": 31, "Offset":  0, "Depth": -1, "Substring": "Encoding: chunked\r\nConnection: " },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "Cont" },
+          { "Length": 23, "Offset":  0, "Depth": -1, "Substring": "Type-Options: nosniff\r\n" }
+        ]
+      ]
+    },
+    {
+      "#29": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 5, "Total length": 45 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "t: " },
+          { "Length": 25, "Offset":  0, "Depth": -1, "Substring": "User-Agent: Mozilla/5.0 (" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "zip" }
+        ]
+      ]
+    },
+    {
+      "#30": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 32 },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "HTTP/1.1\r\n" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "User-Agent: " },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": "HTTP/1." },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": " 20" }
+        ]
+      ]
+    },
+    {
+      "#31": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 12, "Total length": 349 },
+          { "Length": 71, "Offset":  0, "Depth": -1, "Substring": "GET /pub/fedoraproject.org/linux/updates/35/Everything/x86_64/repodata/" },
+          { "Length": 31, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: ftp.byfly.by\r\n" },
+          { "Length": 78, "Offset":  0, "Depth": -1, "Substring": "User-Agent: libdnf (Fedora Linux 35; workstation; Linux.x86_64)\r\nAccept: */*\r\n" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": "HTTP/1.1 20" },
+          { "Length": 46, "Offset":  0, "Depth": -1, "Substring": "\r\nServer: nginx\r\nDate: Wed, 11 May 2022 14:01:" },
+          { "Length": 20, "Offset":  0, "Depth": -1, "Substring": " GMT\r\nContent-Type: " },
+          { "Length": 18, "Offset":  0, "Depth": -1, "Substring": "\r\nContent-Length: " },
+          { "Length": 35, "Offset":  0, "Depth": -1, "Substring": "\r\nLast-Modified: Wed, 11 May 2022 0" },
+          { "Length": 18, "Offset":  0, "Depth": -1, "Substring": "live\r\nETag: \"627b0" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "\"\r\n" },
+          { "Length": 13, "Offset":  0, "Depth": -1, "Substring": "-Range: bytes" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "\r\n\r\n\u0000" }
+        ]
+      ]
+    },
+    {
+      "#32": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 9, "Total length": 149 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: " },
+          { "Length": 14, "Offset":  0, "Depth": -1, "Substring": "\r\nUser-Agent: " },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "\r\nAccept" },
+          { "Length": 37, "Offset":  0, "Depth": -1, "Substring": "\r\n\r\nHTTP/1.1 200 OK\r\nServer: nginx/1." },
+          { "Length": 31, "Offset":  0, "Depth": -1, "Substring": "\r\nDate: Wed, 11 May 2022 14:01:" },
+          { "Length": 20, "Offset":  0, "Depth": -1, "Substring": " GMT\r\nContent-Type: " },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "\r\nCon" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "keep-alive\r\n" }
+        ]
+      ]
+    },
+    {
+      "#33": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 20 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: " }
+        ]
+      ]
+    },
+    {
+      "#34": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 40 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: " },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "User-Agent: " },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "\r\nAccept" }
+        ]
+      ]
+    },
+    {
+      "#35": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 10, "Total length": 137 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: " },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "t: " },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "\r\nAccept" },
+          { "Length": 37, "Offset":  0, "Depth": -1, "Substring": "\r\n\r\nHTTP/1.1 200 OK\r\nServer: nginx/1." },
+          { "Length": 32, "Offset":  0, "Depth": -1, "Substring": "\r\nDate: Wed, 11 May 2022 14:02:3" },
+          { "Length": 20, "Offset":  0, "Depth": -1, "Substring": " GMT\r\nContent-Type: " },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "\r\nCon" },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": "ction: " },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "s: " }
+        ]
+      ]
+    },
+    {
+      "#36": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 11, "Total length": 136 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "User-Agent: " },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "\r\nAccept" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "TTP/1.1 " },
+          { "Length": 44, "Offset":  0, "Depth": -1, "Substring": "\r\nServer: nginx\r\nDate: Wed, 11 May 2022 14:0" },
+          { "Length": 20, "Offset":  0, "Depth": -1, "Substring": " GMT\r\nContent-Type: " },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" },
+          { "Length": 14, "Offset":  0, "Depth": -1, "Substring": "ast-Modified: " },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "2022 " },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": " GMT\r\n" }
+        ]
+      ]
+    },
+    {
+      "#37": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 14 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" }
+        ]
+      ]
+    },
+    {
+      "#38": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 6, "Total length": 39 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "User-Agent: " },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "gth: " },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "ntent" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "ype" }
+        ]
+      ]
+    },
+    {
+      "#39": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 26 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "User-Agent: " }
+        ]
+      ]
+    },
+    {
+      "#40": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 29 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length": 15, "Offset":  0, "Depth": -1, "Substring": "\r\nAccept: */*\r\n" }
+        ]
+      ]
+    },
+    {
+      "#41": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 11 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "1.1" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "200 OK\r\n" }
+        ]
+      ]
+    },
+    {
+      "#42": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 27 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\nHost: " },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "tion" }
+        ]
+      ]
+    },
+    {
+      "#43": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 23 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "P/1." },
+          { "Length": 13, "Offset":  0, "Depth": -1, "Substring": "May 2022 14:0" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "\r\nCont" }
+        ]
+      ]
+    },
+    {
+      "#44": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 11 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": " HTTP/1." }
+        ]
+      ]
+    },
+    {
+      "#45": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 14 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" }
+        ]
+      ]
+    },
+    {
+      "#46": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 12, "Total length": 223 },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "User-Agent: " },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "Accept" },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": "Accept-" },
+          { "Length": 14, "Offset":  0, "Depth": -1, "Substring": "Encoding: gzip" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "Host: " },
+          { "Length": 59, "Offset":  0, "Depth": -1, "Substring": "\r\nVia: 1.1 router (squid/3.5.20)\r\nX-Forwarded-For: 192.168." },
+          { "Length": 25, "Offset":  0, "Depth": -1, "Substring": "\r\nCache-Control: max-age=" },
+          { "Length": 37, "Offset":  0, "Depth": -1, "Substring": "\r\nConnection: keep-alive\r\n\r\nHTTP/1.1 " },
+          { "Length": 27, "Offset":  0, "Depth": -1, "Substring": "Date: Wed, 11 May 2022 14:0" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "GMT\r\nCon" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" },
+          { "Length": 19, "Offset":  0, "Depth": -1, "Substring": "ction: keep-alive\r\n" }
+        ]
+      ]
+    },
+    {
+      "#47": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 10, "Total length": 825 },
+          { "Length": 21, "Offset":  0, "Depth": -1, "Substring": "GET /images/film_240/" },
+          { "Length": 223, "Offset":  0, "Depth": -1, "Substring": ".jpg HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 /31.0\r\nAccept: image/png,image/*;q=0.8,*/*;q=0.5\r\nAccept-Language: en-gb,en;q=0.7,en-US;q=0.3\r\nAccept-Encoding: gzip, deflate\r\nHost: img" },
+          { "Length": 200, "Offset":  0, "Depth": -1, "Substring": ".zonapic.com\r\nVia: 1.1 router (squid/3.5.20)\r\nX-Forwarded-For: 192.168.1.99\r\nCache-Control: max-age=259200\r\nConnection: keep-alive\r\n\r\nHTTP/1.1 200 OK\r\nServer: nginx/1.20.0\r\nDate: Wed, 11 May 2022 14:0" },
+          { "Length": 48, "Offset":  0, "Depth": -1, "Substring": " GMT\r\nContent-Type: image/jpeg\r\nContent-Length: " },
+          { "Length": 41, "Offset":  0, "Depth": -1, "Substring": "\r\nConnection: keep-alive\r\nLast-Modified: " },
+          { "Length": 14, "Offset":  0, "Depth": -1, "Substring": "GMT\r\nExpires: " },
+          { "Length": 257, "Offset":  0, "Depth": -1, "Substring": "GMT\r\nCache-Control: max-age=2592000\r\nAccess-Control-Allow-Origin: *\r\nAccept-Ranges: bytes\r\n\r\n\u00FF\u00D8\u00FF\u00E0\u0000\u0010JFIF\u0000\u0001\u0002\u0000\u0000\u0001\u0000\u0001\u0000\u0000\u00FF\u00DB\u0000C\u0000\u0006\u0004\u0005\u0006\u0005\u0004\u0006\u0006\u0005\u0006\u0007\u0007\u0006\b\n\u0010\n\n\t\t\n\u0014\u000E\u000F\f\u0010\u0017\u0014\u0018\u0018\u0017\u0014\u0016\u0016\u001A\u001D%\u001F\u001A\u001B#\u001C\u0016\u0016 , #&')*)\u0019\u001F-0-(0%()(\u00FF\u00DB\u0000C\u0001\u0007\u0007\u0007\n\b\n\u0013\n\n\u0013(\u001A\u0016\u001A((((((((((((((((((((((((((((((((((((((((((((((((((\u00FF\u00C2\u0000\u0011\b\u0001" },
+          { "Length": 15, "Offset":  0, "Depth": -1, "Substring": "\u0000\u00F0\u0003\u0001\"\u0000\u0002\u0011\u0001\u0003\u0011\u0001\u00FF\u00C4\u0000" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "\u00FF\u00C4\u0000" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "\u0000\u0000\u0000" }
+        ]
+      ]
+    },
+    {
+      "#48": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 5, "Total length": 30 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "t: " },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "-alive\r\n" }
+        ]
+      ]
+    }
+  ]
+}

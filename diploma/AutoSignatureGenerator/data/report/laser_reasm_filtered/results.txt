@@ -1,0 +1,14 @@
+              precision    recall  f1-score   support
+
+          dns      0.92      0.96      0.94     10281
+          pop      0.67      0.19      0.30        21
+         smtp      0.75      0.94      0.84      1464
+         imap      0.91      0.48      0.62       189
+   bittorrent      0.95      0.97      0.96       853
+          ftp      0.99      0.99      0.99       288
+         http      1.00      0.94      0.97      4890
+        other      0.88      0.81      0.84      5007
+
+     accuracy                          0.92     22993
+    macro avg      0.88      0.78      0.81     22993
+ weighted avg      0.92      0.92      0.92     22993

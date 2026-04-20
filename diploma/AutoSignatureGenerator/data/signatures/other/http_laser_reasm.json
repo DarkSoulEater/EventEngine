@@ -1,0 +1,115 @@
+{
+  "Params": {
+    "target": "http",
+    "algorithm": "LASER",
+    "getInversed": "true",
+    "reassembly": "true",
+    "saveBySequentialPackets": "true",
+    "constraintType": "packet",
+    "constraintValue": "4",
+    "refinement": "true",
+    "sizeThreshold": "300000",
+    "minTotalSize": "8",
+    "minSubstringLength": "3",
+    "minSubstringCount": "2"
+  },
+  "Signatures" : [
+    {
+      "#1": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 14 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" }
+        ]
+      ]
+    },
+    {
+      "#2": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 26 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "User-Agent: " },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Con" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "Length: " }
+        ]
+      ]
+    },
+    {
+      "#3": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 6, "Total length": 65 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length": 14, "Offset":  0, "Depth": -1, "Substring": "\r\nUser-Agent: " },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "\r\nContent-" },
+          { "Length": 18, "Offset":  0, "Depth": -1, "Substring": "Type: application/" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "\r\nAccept-" }
+        ]
+      ]
+    },
+    {
+      "#4": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 26 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "User-Agent: " }
+        ]
+      ]
+    },
+    {
+      "#5": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 25 },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "HTTP/1.1\r\n" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "User-Agent: " },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "1.1" }
+        ]
+      ]
+    },
+    {
+      "#6": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 4, "Total length": 34 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "User-Agent: " },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "Length: " }
+        ]
+      ]
+    },
+    {
+      "#7": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 9, "Total length": 69 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "GET /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "\r\nAccept: " },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "/*\r\n" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "e: " },
+          { "Length": 14, "Offset":  0, "Depth": -1, "Substring": "\r\nUser-Agent: " },
+          { "Length": 10, "Offset":  0, "Depth": -1, "Substring": "TTP/1.1 20" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "Range" },
+          { "Length":  7, "Offset":  0, "Depth": -1, "Substring": ": bytes" }
+        ]
+      ]
+    },
+    {
+      "#8": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 14 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T /" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": " HTTP/1.1\r\n" }
+        ]
+      ]
+    }
+  ]
+}

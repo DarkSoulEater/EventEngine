@@ -1,0 +1,158 @@
+\section*{Приложение}
+\addcontentsline{toc}{section}{Приложение}
+\label{sec:Apendix} \index{Apendix}
+
+Приведём сам алгоритм из статьи:
+
+\begin{lstlisting}[language=PL/I, caption=Алгоритм LASER]
+procedure Signature_Generation ()
+    Flow_Pool {F1[]...Fx[]} <- Santized_packet_collector
+    F1[] <- Iterate, packet dump for Flow 1
+    F2[] <- Iterate, packet dump for Flow 2
+    while i from 0 to packet_constraint do
+        while j from 0 to packet_constraint do
+            if |F1[i].packet_size - F2[j].packet_size| < threshold
+            result_LCS <- LASER (F1[i], F1[j])
+            LCS_Pool{} <- Append result_LCS, end if
+        j++, end while
+    i++, end while
+    S <- select the longest from LCS_Pool
+    while i from 0 to number of rest flows of Flow_Pool do
+        Fi <- select one from the rest of Flow_Pool
+        result_LCS <- LASER (S, Fi)
+        S <- select the longest from result_LCS
+    i++, end while
+    return S
+
+procedure LASER (PacketA[1...m], PacketB[1...n])
+    PacketA [m...1] <- Reverse byte stream
+    PacketB [n...1] <- Reverse byte stream
+    Matrix [m][n]
+    while i from 0 to m do
+        while j from 0 to n do
+            if i = 0 or j = 0, then Matrix[i][j] = 0;
+            else if PacketA[i] = PacketB[j], then
+                Matrix [i][j] <- 'Diagonal',
+                Matrix [i][j] = Matrix [i-1][j-1] + 1;
+            else if Matrix[i-1][j] >= Matrix[i][j-1], then
+                Matrix[i][j] <- 'Up',
+                Matrix[i][j] = Matrix [i-1][j];
+            else
+                Matrix[i][j] <- 'Up',
+                Matrix[i][j] = Matrix [i][j-1];
+        end while
+    end while
+    i <- m-1; j <- n-1 /* Tracking */
+    while Matrix[i][j] != 0 do
+        if Matrix[i][j] = 'Left', then
+            j--
+        else if Matrix[i][j] = 'Up', then
+            i--
+        else if Matrix[i][j] = 'Diagonal', then do
+            Substring <- Append PacketA[i]
+            if Matrix[i-1][j-1] != 'Diagonal', then
+                Substring <- Append special break point character (e.g. '/')
+    i--; j--, end while
+    while tokenizing substring based on break point do
+        if token_length > minimum_substring_length_constraint
+            then, result_LCS <- Append token_substring
+    end while
+    return result_LCS
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=Java, caption=Алгоритм построения дерева подстрок]
+    constructTree(substrings)
+      Node root = new Node('');
+      Tree tree = new Tree(root);
+      Sort(substrings);
+      for (int i =0; i< substrings.length ; i++)
+        addNode(root, new Node(substrings[i]));
+
+    boolean addNode(curNode, newNode )
+      if (!isSubFlowSet(curNode, newNode))
+        return false;
+      boolean succ = false;
+      for every child node of curNode
+        if (addNode(child, newNode))
+          succ = true;
+      if (!succ)
+        node.addChild(newNode);
+      return true
+    \end{lstlisting}
+
+\begin{lstlisting}[language=Pascal, caption=Алгоритм выделения подпоследовательности, mathescape]
+    subsequenceExtractor(SequenceSet, MinSupp):
+        for each sequence $S$ in SequenceSet do
+        for each item $i$ in sequence $S$ do
+            $L_1$ $\leftarrow$  $L_1$ $\cup$ $i$;
+        end
+        end
+        $k$ $\leftarrow$ 2
+        while $L_{k-1}$ $\neq$ $\varnothing$ do
+        for each candidate $c$ in $L_{k-1}$ do
+            supp $\leftarrow$ calSupport($c$, SequenceSet);
+            if (supp < Minsupp) then
+            $L_{k-1}$ $\leftarrow$ $L_{k-1}$ - $c$;
+            end
+        end
+        $L_k$ $\leftarrow$ extractCandidate($L_{k-1}$);
+        k++;
+        end
+        SubSequenceSet $\leftarrow$ $\cup_k$ $L_k$;
+        deleteSubset(SubSequenceSet);
+        return SubSequenceSet;
+    \end{lstlisting}
+
+\begin{lstlisting}[language=Pascal, caption=Алгоритм вычисления поддержки, mathescape]
+    calSupport(candidate, SequenceSet):
+      for each sequence $S$ in SequenceSet do
+        totalhost $\leftarrow$ totalhost $\cup$ $S$.host_id;
+        for k = 1 to size of ($S$, $<I_1I_2I_3...I_n>$) do
+          p $\leftarrow$ k, q $\leftarrow$ 1;
+          while ($S$, $<I_p>$ $==$ candidate.$<I_q>$) do
+            p++, q++;
+          end
+          if (q $==$ size of (candidate.$<I_1I_2I_3...I_n>$)) then
+            supphost $\leftarrow$ supphost $\cup$ S.host_id;
+            break
+          end
+        end
+      end
+      return supphost / totalhost;
+    \end{lstlisting}
+
+
+    \begin{lstlisting}[language=Pascal, caption=Алгоритм извлечения кандидата, mathescape]
+        extractCandidate($L_{k-1}$)
+          for each candidate $x$ in $L_{k-1}$ do
+            for each candidate $y$ in $L_{k-1}$ do
+              if (k $==$ 2) then
+                $L_k$ $\leftarrow$ $L_k$ $\cup$ $<x.<i_1>y.<i_1>>$;
+              end
+              else if (($x.<i_2>$ $==$ $y.<i_1>$) && ($x.<i_3>$ $==$ $y.<i_2>$) && ...
+                       ($x.<i_{k-2}>$ $==$ $y.<i_{k-1}>$)) then
+                $L_k$ $\leftarrow$ $L_k$ $\cup$ $<x.<i_1, i_2, i_3, ..., i_{k-1}>y.<i_{k-1}>$;
+              end
+            end
+          end
+          return $L_k$;
+        \end{lstlisting}
+
+
+
+\begin{lstlisting}[language=Pascal, caption=Алгоритм извлечения кандидата, mathescape]
+    extractCandidate($L_{k-1}$)
+      for each candidate $x$ in $L_{k-1}$ do
+        for each candidate $y$ in $L_{k-1}$ do
+          if (k $==$ 2) then
+            $L_k$ $\leftarrow$ $L_k$ $\cup$ $<x.<i_1>y.<i_1>>$;
+          end
+          else if (($x.<i_2>$ $==$ $y.<i_1>$) && ($x.<i_3>$ $==$ $y.<i_2>$) && ...
+                   ($x.<i_{k-2}>$ $==$ $y.<i_{k-1}>$)) then
+            $L_k$ $\leftarrow$ $L_k$ $\cup$ $<x.<i_1, i_2, i_3, ..., i_{k-1}>y.<i_{k-1}>$;
+          end
+        end
+      end
+      return $L_k$;
+    \end{lstlisting}

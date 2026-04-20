@@ -1,0 +1,107 @@
+%%% Работа с русским языком
+\usepackage{cmap}			 % поиск в PDF
+\usepackage{mathtext} 		 % русские буквы в формулах
+\usepackage[T2A]{fontenc}	 % кодировка
+\usepackage[utf8]{inputenc}	 % кодировка исходного текста
+\usepackage[russian]{babel}	 % локализация и переносы
+
+%%% Пакеты для работы с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage{icomma}
+
+%% Номера формул
+%\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+%\usepackage{leqno}               % Немуреация формул слева
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs}    % Красивый матшрифт
+
+%% Поля (геометрия страницы)
+\usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+%% Русские списки
+\usepackage{enumitem}
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+\usepackage{tcolorbox}
+\usepackage{url}
+\usepackage{svg}
+
+\usepackage[ddmmyyyy,hhmmss]{datetime}
+\renewcommand{\dateseparator}{.}
+
+%%% Работа с картинками
+\usepackage[nooneline]{caption}
+\captionsetup[table]{justification=raggedright,labelsep=endash}
+\captionsetup[figure]{justification=centering,labelsep=endash,name=Рисунок}
+
+\usepackage{graphicx}                  % Для вставки рисунков
+\graphicspath{{images/}{images2/}{../images/}{../data/}}     % папки с картинками
+\setlength\fboxsep{3pt}                % Отступ рамки \fbox{} от рисунка
+\setlength\fboxrule{1pt}               % Толщина линий рамки \fbox{}
+\usepackage{wrapfig}                   % Обтекание рисунков и таблиц текстом
+
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}                        % Длинные таблицы
+\usepackage{multirow}                         % Слияние строк в таблице
+\usepackage{setspace}
+
+%% Красная строка
+\setlength{\parindent}{12.5mm}
+\usepackage{indentfirst}
+
+%% Интервалы
+\onehalfspacing
+
+%% TikZ
+\usepackage{tikz}
+\usetikzlibrary{graphs,graphs.standard}
+
+%% Верхний колонтитул
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%% дополнения
+\usepackage{float}   % Добавляет возможность работы с командой [H] которая улучшает расположение на странице
+\usepackage{gensymb} % Красивые градусы
+\usepackage{caption} % Пакет для подписей к рисункам, в частности, для работы caption*
+\usepackage{listings} % Пакет для листингов с кодом
+\usepackage{xcolor}
+\usepackage[noadjust]{cite}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=true,
+    columns=flexible,
+    breaklines=true,
+    captionpos=t,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4
+}
+
+\lstset{style=mystyle}
+
+% подключаем hyperref (для ссылок внутри  pdf)
+\usepackage[unicode, pdftex]{hyperref}

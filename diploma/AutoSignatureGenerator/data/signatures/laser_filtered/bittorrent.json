@@ -1,0 +1,92 @@
+{
+  "Params": {
+    "target": "bittorrent",
+    "algorithm": "LASER",
+    "getInversed": "true",
+    "reassembly": "false",
+    "constraintType": "packet",
+    "constraintValue": "5",
+    "refinement": "true",
+    "sizeThreshold": "300",
+    "minTotalSize": "8",
+    "minSubstringLength": "3",
+    "minSubstringCount": "2"
+  },
+  "Signatures": [
+    {
+      "#1": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 6, "Total length": 907 },
+          { "Length": 69, "Offset":  0, "Depth": -1, "Substring": "AAADvgAAAAxBWl9IQU5EU0hBS0UBZDY6Y2xpZW50NDpab25hMTQ6aGFuZHNoYWtlX3R5cGVpMGU4OmlkZW50aXR5MjA6" },
+          { "Length": 765, "Offset":  0, "Depth": -1, "Substring": "ODptZXNzYWdlc2xkMjppZDE2OkFaX1BFRVJfRVhDSEFOR0UzOnZlcjE6AmVkMjppZDE1OkFaX1JFUVVFU1RfSElOVDM6dmVyMToCZWQyOmlkNzpBWl9IQVZFMzp2ZXIxOgJlZDI6aWQxMjpBWl9CQURfUElFQ0UzOnZlcjE6AmVkMjppZDExOkFaX1NUQVRfUkVRMzp2ZXIxOgJlZDI6aWQxMTpBWl9TVEFUX1JFUDM6dmVyMToCZWQyOmlkMTE6QlRfQklURklFTEQzOnZlcjE6AmVkMjppZDk6QlRfQ0FOQ0VMMzp2ZXIxOgJlZDI6aWQ4OkJUX0NIT0tFMzp2ZXIxOgJlZDI6aWQxMjpCVF9IQU5EU0hBS0UzOnZlcjE6AWVkMjppZDc6QlRfSEFWRTM6dmVyMToCZWQyOmlkMTM6QlRfSU5URVJFU1RFRDM6dmVyMToCZWQyOmlkMTM6QlRfS0VFUF9BTElWRTM6dmVyMToCZWQyOmlkODpCVF9QSUVDRTM6dmVyMToCZWQyOmlkMTA6QlRfUkVRVUVTVDM6dmVyMToCZWQyOmlkMTA6QlRfVU5DSE9LRTM6dmVyMToCZWQyOmlkMTU6QlRfVU5JTlRFUkVTVEVEMzp2ZXIxOgJlZDI6aWQxNjpCVF9TVUdHRVNUX1BJRUNFMzp2ZXIxOgJlZDI6aWQxMTpCVF9IQVZFX0FMTDM6dmVyMToCZWQyOmlkMTI6QlRfSEFWRV9OT05FMzp2ZXIxOgJlZDI6aWQxNzpCVF9SRUpFQ1RfUkVRVUVTVDM6dmVyMToCZWQyOmlkMTU6QlRfQUxMT1dFRF9GQVNUMzp2ZXIxOgJlZDI6aWQxNzpCVF9MVF9FWFRfTUVTU0FHRTM6dmVyMToAZWQyOmlkMTE6QlRfREhUX1BPUlQzOnZlcjE6AWVkMjppZDEyOmx0X2hhbmRzaGFrZTM6dmVyMToCZWQyOmlkNjp1dF9wZXgzOnZlcjE6AmVlNzpzZXNzaW9uMjA6" },
+          { "Length": 11, "Offset":  0, "Depth": -1, "Substring": "ODp0Y3BfcG9ydGk=" },
+          { "Length": 13, "Offset":  0, "Depth": -1, "Substring": "ZTk6dWRwMl9wb3J0aQ==" },
+          { "Length": 12, "Offset":  0, "Depth": -1, "Substring": "ZTg6dWRwX3BvcnRp" },
+          { "Length": 37, "Offset":  0, "Depth": -1, "Substring": "ZTExOnVwbG9hZF9vbmx5aTFlNzp2ZXJzaW9uNzoyLjEuMC4zZQ==" }
+        ]
+      ]
+    },
+    {
+      "#2": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 36 },
+          { "Length": 28, "Offset":  0, "Depth": -1, "Substring": "E0JpdFRvcnJlbnQgcHJvdG9jb2yAAAAAABMABQ==" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "LVpPMjEwMy0=" }
+        ]
+      ]
+    },
+    {
+      "#3": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 941 },
+          { "Length": 854, "Offset":  0, "Depth": -1, "Substring": "AAADvgAAAAxBWl9IQU5EU0hBS0UBZDY6Y2xpZW50NDpab25hMTQ6aGFuZHNoYWtlX3R5cGVpMGU4OmlkZW50aXR5MjA6Xc0zU4MpJy5UwdyDCp03nodrvss4Om1lc3NhZ2VzbGQyOmlkMTY6QVpfUEVFUl9FWENIQU5HRTM6dmVyMToCZWQyOmlkMTU6QVpfUkVRVUVTVF9ISU5UMzp2ZXIxOgJlZDI6aWQ3OkFaX0hBVkUzOnZlcjE6AmVkMjppZDEyOkFaX0JBRF9QSUVDRTM6dmVyMToCZWQyOmlkMTE6QVpfU1RBVF9SRVEzOnZlcjE6AmVkMjppZDExOkFaX1NUQVRfUkVQMzp2ZXIxOgJlZDI6aWQxMTpCVF9CSVRGSUVMRDM6dmVyMToCZWQyOmlkOTpCVF9DQU5DRUwzOnZlcjE6AmVkMjppZDg6QlRfQ0hPS0UzOnZlcjE6AmVkMjppZDEyOkJUX0hBTkRTSEFLRTM6dmVyMToBZWQyOmlkNzpCVF9IQVZFMzp2ZXIxOgJlZDI6aWQxMzpCVF9JTlRFUkVTVEVEMzp2ZXIxOgJlZDI6aWQxMzpCVF9LRUVQX0FMSVZFMzp2ZXIxOgJlZDI6aWQ4OkJUX1BJRUNFMzp2ZXIxOgJlZDI6aWQxMDpCVF9SRVFVRVNUMzp2ZXIxOgJlZDI6aWQxMDpCVF9VTkNIT0tFMzp2ZXIxOgJlZDI6aWQxNTpCVF9VTklOVEVSRVNURUQzOnZlcjE6AmVkMjppZDE2OkJUX1NVR0dFU1RfUElFQ0UzOnZlcjE6AmVkMjppZDExOkJUX0hBVkVfQUxMMzp2ZXIxOgJlZDI6aWQxMjpCVF9IQVZFX05PTkUzOnZlcjE6AmVkMjppZDE3OkJUX1JFSkVDVF9SRVFVRVNUMzp2ZXIxOgJlZDI6aWQxNTpCVF9BTExPV0VEX0ZBU1QzOnZlcjE6AmVkMjppZDE3OkJUX0xUX0VYVF9NRVNTQUdFMzp2ZXIxOgBlZDI6aWQxMTpCVF9ESFRfUE9SVDM6dmVyMToBZWQyOmlkMTI6bHRfaGFuZHNoYWtlMzp2ZXIxOgJlZDI6aWQ2OnV0X3BleDM6dmVyMToCZWU3OnNlc3Npb24yMDo=" },
+          { "Length": 87, "Offset":  0, "Depth": -1, "Substring": "OnRjcF9wb3J0aTU0NDk0ZTk6dWRwMl9wb3J0aTU0NDk0ZTg6dWRwX3BvcnRpNTQ0OTRlMTE6dXBsb2FkX29ubHlpMWU3OnZlcnNpb243OjIuMS4wLjNl" }
+        ]
+      ]
+    },
+    {
+      "#4": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 24 },
+          { "Length": 20, "Offset":  0, "Depth": -1, "Substring": "E0JpdFRvcnJlbnQgcHJvdG9jb2w=" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "AAAAAA==" }
+        ]
+      ]
+    },
+    {
+      "#5": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 30 },
+          { "Length": 27, "Offset":  0, "Depth": -1, "Substring": "E0JpdFRvcnJlbnQgcHJvdG9jb2wAAAAAABAA" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "MjIx" }
+        ]
+      ]
+    },
+    {
+      "#6": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 51 },
+          { "Length": 27, "Offset":  0, "Depth": -1, "Substring": "E0JpdFRvcnJlbnQgcHJvdG9jb2wAAAAAABAA" },
+          { "Length": 21, "Offset":  0, "Depth": -1, "Substring": "PENq95kixYI2MqD/RErNpTJ15QYt" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "MjIx" }
+        ]
+      ]
+    },
+    {
+      "#7": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 43 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "AAAA" },
+          { "Length": 40, "Offset":  0, "Depth": -1, "Substring": "FABkMTptZDY6dXRfcGV4aTFlMTE6dXRfbWV0YWRhdGFpMmVlMTpwaQ==" }
+        ]
+      ]
+    }
+  ]
+}

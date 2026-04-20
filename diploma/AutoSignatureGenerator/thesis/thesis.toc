@@ -1,0 +1,46 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Введение}{4}{section.1}%
+\contentsline {section}{\numberline {2}Обзор существующих решений}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Анализаторы сетевого трафика}{6}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Ntopng}{6}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Suricata}{6}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Zeek}{7}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Итоговый анализ анализаторов}{7}{subsubsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.2}Boost.Signals2}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Eventpp}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Libuv}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Итоговый анализ библиотек событий}{8}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Построение решения и исследование задачи}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Выбор подходящих инструментов}{10}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Концептуальная модель системы событий}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Механизм расширения через наследование}{11}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Проблема хранения разнотипных обработчиков}{11}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Идентификация типов событий без RTTI}{13}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Решение на основе CRTP и атомарного генератора идентификаторов}{13}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Сравнение производительности стратегий идентификации типов}{15}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}Механизм диспетчеризации событий}{15}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Разделение стратегий выполнения}{15}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}Интерфейс регистрации обработчиков}{17}{subsubsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.7}Сравнительный анализ стратегий выполнения обработчиков}{17}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Методология эксперимента}{17}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Результаты измерения задержек}{18}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Влияние на пропускную способность системы}{19}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.4}Анализ вариативности задержки}{20}{subsubsection.3.7.4}%
+\contentsline {subsubsection}{\numberline {3.7.5}Практические рекомендации для сценариев DPI}{20}{subsubsection.3.7.5}%
+\contentsline {subsubsection}{\numberline {3.7.6}Выводы по разделу}{21}{subsubsection.3.7.6}%
+\contentsline {section}{\numberline {4}Экспериментальные исследования и оценка эффективности}{23}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Описание тестового стенда}{23}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Аппаратная конфигурация}{23}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Программное окружение}{24}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Меры обеспечения воспроизводимости}{24}{subsubsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.2}Методология измерения производительности}{25}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Базовая производительность диспетчеризации}{25}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Производительность с обработчиками}{26}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Синхронные обработчики: масштабирование по потокам}{26}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Влияние числа обработчиков на задержку}{26}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Сравнение синхронного и асинхронного выполнения}{26}{subsubsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.5}Сравнение с альтернативными решениями}{27}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Профилирование использования ресурсов}{28}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Ограничения исследования}{28}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Выводы по главе}{29}{subsection.4.8}%
+\contentsline {section}{\numberline {5}Заключение}{30}{section.5}%

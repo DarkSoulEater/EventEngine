@@ -1,0 +1,18 @@
+{
+  "Params": {
+    "target": "pop",
+    "algorithm": "LCS",
+    "getInversed": "true",
+    "reassembly": "true",
+    "saveBySequentialPackets": "false",
+    "constraintType": "payload",
+    "constraintValue": "500",
+    "refinement": "true",
+    "minTotalSize": "8",
+    "minSubstringLength": "3",
+    "minSubstringCount": "2"
+  },
+  "Signatures": [
+
+  ]
+}

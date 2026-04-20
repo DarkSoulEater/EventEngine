@@ -13,9 +13,9 @@ struct MyEvent2 : public event::EventBase<MyEvent2> {
 int main() {
   std::cout << "Hello world\n";
 
-  event::handle([] {
-
-  });
+  // event::handle([] {
+  //
+  // });
 
   MyEvent event;
   std::cout << event.getTypeId() << "\n";

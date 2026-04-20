@@ -1,0 +1,138 @@
+\relax 
+\providecommand{\transparent@use}[1]{}
+\providecommand\babel@aux[2]{}
+\@nameuse{bbl@beforestart}
+\catcode `"\active 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\bibstyle{ugost2008l}
+\babel@aux{russian}{}
+\citation{zhang2021nta}
+\citation{pang2020dpi}
+\citation{fowler2014microservices}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Введение}{4}{section.1}\protected@file@percent }
+\newlabel{sec:Section0}{{1}{4}{Введение}{section.1}{}}
+\citation{inlinac2021survey}
+\citation{ntopng2023doc}
+\citation{suricata2023arch}
+\citation{zeek2022design}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Обзор существующих решений}{6}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Анализаторы сетевого трафика}{6}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Ntopng}{6}{subsubsection.2.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Suricata}{6}{subsubsection.2.1.2}\protected@file@percent }
+\citation{boost2023}
+\citation{schaling2011boost}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}Zeek}{7}{subsubsection.2.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}Итоговый анализ анализаторов}{7}{subsubsection.2.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Boost.Signals2}{7}{subsection.2.2}\protected@file@percent }
+\citation{eventpp2023}
+\citation{libuv2023}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Eventpp}{8}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Libuv}{8}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Итоговый анализ библиотек событий}{8}{subsection.2.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Сравнительный анализ библиотек событий}}{9}{table.caption.3}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:libs_comparison}{{1}{9}{Сравнительный анализ библиотек событий}{table.caption.3}{}}
+\citation{realtime2021gc}
+\citation{cpp2023perf}
+\citation{gamma1994design}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Построение решения и исследование задачи}{10}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Выбор подходящих инструментов}{10}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Концептуальная модель системы событий}{10}{subsection.3.2}\protected@file@percent }
+\citation{vandevoorde2017templates}
+\citation{alexandrescu2001modern}
+\citation{function2023}
+\citation{stringsbo}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Механизм расширения через наследование}{11}{subsection.3.3}\protected@file@percent }
+\newlabel{lst:user_event}{{1}{11}{Определение пользовательского события через наследование от EventBase}{lstlisting.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}{\ignorespaces Определение пользовательского события через наследование от EventBase}}{11}{lstlisting.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Проблема хранения разнотипных обработчиков}{11}{subsection.3.4}\protected@file@percent }
+\newlabel{lst:handler_impl}{{2}{12}{Handler с type erasure}{lstlisting.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}{\ignorespaces Handler с type erasure}}{12}{lstlisting.2}\protected@file@percent }
+\newlabel{lst:handler_impl}{{3}{12}{Шаблонный конструктор для Handler}{lstlisting.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}{\ignorespaces Шаблонный конструктор для Handler}}{12}{lstlisting.3}\protected@file@percent }
+\citation{lakos1996large}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Идентификация типов событий без RTTI}{13}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}Решение на основе CRTP и атомарного генератора идентификаторов}{13}{subsubsection.3.5.1}\protected@file@percent }
+\newlabel{lst:eventbase_impl}{{4}{13}{Реализация EventBase с CRTP и атомарным генератором идентификаторов}{lstlisting.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}{\ignorespaces Реализация EventBase с CRTP и атомарным генератором идентификаторов}}{13}{lstlisting.4}\protected@file@percent }
+\citation{meyers2014effective}
+\citation{vandevoorde2017templates}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2}Сравнение производительности стратегий идентификации типов}{15}{subsubsection.3.5.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Сравнение стратегий получения идентификатора типа}}{15}{table.caption.4}\protected@file@percent }
+\newlabel{tab:type_id_comparison}{{2}{15}{Сравнение стратегий получения идентификатора типа}{table.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Механизм диспетчеризации событий}{15}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.1}Разделение стратегий выполнения}{15}{subsubsection.3.6.1}\protected@file@percent }
+\newlabel{lst:dispatch_impl}{{5}{16}{Функция диспетчеризации с разделением стратегий выполнения}{lstlisting.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}{\ignorespaces Функция диспетчеризации с разделением стратегий выполнения}}{16}{lstlisting.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.2}Интерфейс регистрации обработчиков}{17}{subsubsection.3.6.2}\protected@file@percent }
+\newlabel{lst:subscribe_impl}{{6}{17}{Функции регистрации обработчиков}{lstlisting.6}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6}{\ignorespaces Функции регистрации обработчиков}}{17}{lstlisting.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Сравнительный анализ стратегий выполнения обработчиков}{17}{subsection.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.1}Методология эксперимента}{17}{subsubsection.3.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.2}Результаты измерения задержек}{18}{subsubsection.3.7.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Сравнение задержек синхронного и асинхронного выполнения}}{19}{table.caption.5}\protected@file@percent }
+\newlabel{tab:latency_comparison}{{3}{19}{Сравнение задержек синхронного и асинхронного выполнения}{table.caption.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.3}Влияние на пропускную способность системы}{19}{subsubsection.3.7.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Пропускная способность при различных стратегиях выполнения}}{20}{table.caption.6}\protected@file@percent }
+\newlabel{tab:throughput_comparison}{{4}{20}{Пропускная способность при различных стратегиях выполнения}{table.caption.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.4}Анализ вариативности задержки}{20}{subsubsection.3.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.5}Практические рекомендации для сценариев DPI}{20}{subsubsection.3.7.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Рекомендации по выбору стратегии выполнения}}{21}{table.caption.7}\protected@file@percent }
+\newlabel{tab:strategy_recommendations}{{5}{21}{Рекомендации по выбору стратегии выполнения}{table.caption.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.6}Выводы по разделу}{21}{subsubsection.3.7.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Экспериментальные исследования и оценка эффективности}{23}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Описание тестового стенда}{23}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:testbed}{{4.1}{23}{Описание тестового стенда}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Аппаратная конфигурация}{23}{subsubsection.4.1.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Аппаратная конфигурация тестового стенда}}{23}{table.caption.8}\protected@file@percent }
+\newlabel{tab:hardware_config}{{6}{23}{Аппаратная конфигурация тестового стенда}{table.caption.8}{}}
+\citation{googlebenchmark2023}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Программное окружение}{24}{subsubsection.4.1.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Программная конфигурация тестового стенда}}{24}{table.caption.9}\protected@file@percent }
+\newlabel{tab:software_config}{{7}{24}{Программная конфигурация тестового стенда}{table.caption.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}Меры обеспечения воспроизводимости}{24}{subsubsection.4.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Методология измерения производительности}{25}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Базовая производительность диспетчеризации}{25}{subsection.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Накладные расходы диспетчеризации без обработчиков}}{25}{table.caption.10}\protected@file@percent }
+\newlabel{tab:baseline_dispatch}{{8}{25}{Накладные расходы диспетчеризации без обработчиков}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Производительность с обработчиками}{26}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Синхронные обработчики: масштабирование по потокам}{26}{subsubsection.4.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Производительность с одним синхронным обработчиком}}{26}{table.caption.11}\protected@file@percent }
+\newlabel{tab:single_sync_handler}{{9}{26}{Производительность с одним синхронным обработчиком}{table.caption.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Влияние числа обработчиков на задержку}{26}{subsubsection.4.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Влияние числа обработчиков на задержку (1 поток, 1\,000 событий)}}{26}{table.caption.12}\protected@file@percent }
+\newlabel{tab:handler_scaling}{{10}{26}{Влияние числа обработчиков на задержку (1 поток, 1\,000 событий)}{table.caption.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}Сравнение синхронного и асинхронного выполнения}{26}{subsubsection.4.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Сравнение стратегий выполнения обработчиков}}{27}{table.caption.13}\protected@file@percent }
+\newlabel{tab:sync_vs_async}{{11}{27}{Сравнение стратегий выполнения обработчиков}{table.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Сравнение с альтернативными решениями}{27}{subsection.4.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Сравнительный анализ производительности библиотек событий}}{27}{table.caption.14}\protected@file@percent }
+\newlabel{tab:library_comparison}{{12}{27}{Сравнительный анализ производительности библиотек событий}{table.caption.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Профилирование использования ресурсов}{28}{subsection.4.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Метрики использования ресурсов (на 1 млн событий)}}{28}{table.caption.15}\protected@file@percent }
+\newlabel{tab:perf_metrics}{{13}{28}{Метрики использования ресурсов (на 1 млн событий)}{table.caption.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Ограничения исследования}{28}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Выводы по главе}{29}{subsection.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Заключение}{30}{section.5}\protected@file@percent }
+\citation{*}
+\bibdata{references}
+\bibcite{zhang2021nta}{1}
+\bibcite{pang2020dpi}{2}
+\bibcite{fowler2014microservices}{3}
+\bibcite{inlinac2021survey}{4}
+\bibcite{ntopng2023doc}{5}
+\bibcite{suricata2023arch}{6}
+\bibcite{zeek2022design}{7}
+\bibcite{boost2023signal}{8}
+\bibcite{eventpp2023doc}{9}
+\bibcite{libuv2023doc}{10}
+\bibcite{realtime2021gc}{11}
+\bibcite{cpp2023perf}{12}
+\bibcite{sharafaldin2018cic}{13}
+\bibcite{sre2018google}{14}
+\bibcite{dag2022design}{15}
+\bibcite{wang2021wasm}{16}
+\gdef\svg@ink@ver@settings{{\m@ne }{inkscape}{1}}
+\gdef \@abspage@last{33}

@@ -1,0 +1,91 @@
+{
+  "Params": {
+    "target": "imap",
+    "algorithm": "LASER",
+    "getInversed": "true",
+    "reassembly": "true",
+    "saveBySequentialPackets": "true",
+    "constraintType": "packet",
+    "constraintValue": "5",
+    "refinement": "true",
+    "sizeThreshold": "300000",
+    "minTotalSize": "8",
+    "minSubstringLength": "3",
+    "minSubstringCount": "2"
+  },
+  "Signatures": [
+    {
+      "#1": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 28 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T0sg" },
+          { "Length": 25, "Offset":  0, "Depth": -1, "Substring": "ZCAoMC4wMDEgKyAwLjAwMCBzZWNzKS4NCg==" }
+        ]
+      ]
+    },
+    {
+      "#2": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 19 },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "KiBPSyA=" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "TUFQNHJldjEg" },
+          { "Length":  5, "Offset":  0, "Depth": -1, "Substring": "cmVhZHk=" }
+        ]
+      ]
+    },
+    {
+      "#3": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 65 },
+          { "Length": 26, "Offset":  0, "Depth": -1, "Substring": "IE9LIFtDQVBBQklMSVRZIElNQVA0cmV2MSA=" },
+          { "Length": 39, "Offset":  0, "Depth": -1, "Substring": "U0FTTC1JUiBMT0dJTi1SRUZFUlJBTFMgSUQgRU5BQkxFIElETEUg" }
+        ]
+      ]
+    },
+    {
+      "#4": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 18 },
+          { "Length": 14, "Offset":  0, "Depth": -1, "Substring": "IEFVVEhFTlRJQ0FURSA=" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "SU4NCg==" }
+        ]
+      ]
+    },
+    {
+      "#5": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 142 },
+          { "Length": 139, "Offset":  0, "Depth": -1, "Substring": "Q0FQQUJJTElUWSBJTUFQNHJldjEgTElURVJBTCsgU0FTTC1JUiBMT0dJTi1SRUZFUlJBTFMgSUQgRU5BQkxFIElETEUgU1RBUlRUTFMgQVVUSD1QTEFJTiBBVVRIPUxPR0lOIEFVVEg9RElHRVNULU1ENSBBVVRIPUNSQU0tTUQ1IEFVVEg9TlRMTQ==" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "Lg0K" }
+        ]
+      ]
+    },
+    {
+      "#6": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 28 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "T0sg" },
+          { "Length": 17, "Offset":  0, "Depth": -1, "Substring": "ZCAoMC4wMDEgKyAwLjAwMCA=" },
+          { "Length":  8, "Offset":  0, "Depth": -1, "Substring": "c2VjcykuDQo=" }
+        ]
+      ]
+    },
+    {
+      "#7": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 3, "Total length": 9 },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "WFRF" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "VVMg" },
+          { "Length":  3, "Offset":  0, "Depth": -1, "Substring": "ZWQg" }
+        ]
+      ]
+    }
+  ]
+}

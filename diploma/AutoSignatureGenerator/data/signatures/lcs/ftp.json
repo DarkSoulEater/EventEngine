@@ -1,0 +1,48 @@
+{
+  "Params": {
+    "target": "ftp",
+    "algorithm": "LCS",
+    "getInversed": "true",
+    "reassembly": "true",
+    "saveBySequentialPackets": "false",
+    "constraintType": "payload",
+    "constraintValue": "500",
+    "refinement": "true",
+    "minTotalSize": "8",
+    "minSubstringLength": "3",
+    "minSubstringCount": "2"
+  },
+  "Signatures": [
+    {
+      "#1": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 2, "Total length": 8 },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "MjIwIA==" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "RlRQIA==" }
+        ]
+      ]
+    },
+    {
+      "#2": [
+        { "TokenSequence count": 1 },
+        [
+          { "Substrings count": 13, "Total length": 408 },
+          { "Length": 157, "Offset":  0, "Depth": -1, "Substring": "MjIwIFdlbGNvbWUgdG8gc291cmNld2FyZSBGVFAgc2VydmljZS4NClVTRVIgYW5vbnltb3VzDQozMzEgUGxlYXNlIHNwZWNpZnkgdGhlIHBhc3N3b3JkLg0KUEFTUyAtd2dldEANCjIzMCBMb2dpbiBzdWNjZXNzZnVsLg0KU1lTVA0KMjE1IFVOSVggVHlwZTogTDgNClBXRA0KMg==" },
+          { "Length": 101, "Offset":  0, "Depth": -1, "Substring": "MDAgU3dpdGNoaW5nIHRvIEJpbmFyeSBtb2RlLg0KQ1dEIC9wdWIvZ2NjL2luZnJhc3RydWN0dXJlDQoyNTAgRGlyZWN0b3J5IHN1Y2Nlc3NmdWxseSBjaGFuZ2VkLg0KU0laRSA=" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "MS4wLg==" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "dGFyLg==" },
+          { "Length":  6, "Offset":  0, "Depth": -1, "Substring": "DQoyMTMg" },
+          { "Length": 46, "Offset":  0, "Depth": -1, "Substring": "DQpQQVNWDQoyMjcgRW50ZXJpbmcgUGFzc2l2ZSBNb2RlICg4LDQzLDg1LDk3LA==" },
+          { "Length":  9, "Offset":  0, "Depth": -1, "Substring": "KS4NClJFVFIg" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "MS4wLg==" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "dGFyLg==" },
+          { "Length": 46, "Offset":  0, "Depth": -1, "Substring": "DQoxNTAgT3BlbmluZyBCSU5BUlkgbW9kZSBkYXRhIGNvbm5lY3Rpb24gZm9yIA==" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "MS4wLg==" },
+          { "Length":  4, "Offset":  0, "Depth": -1, "Substring": "dGFyLg==" },
+          { "Length": 19, "Offset":  0, "Depth": -1, "Substring": "Ynl0ZXMpLg0KMjI2IFRyYW5zZg==" }
+        ]
+      ]
+    }
+  ]
+}
