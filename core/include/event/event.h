@@ -9,7 +9,7 @@ class IdGenerator {
 public:
   inline static size_t nextId() {
     static std::atomic<uint64_t> id_generator_{0};
-    return id_generator_++;
+    return id_generator_.fetch_add(1, std::memory_order::relaxed);
   }
 };
 
