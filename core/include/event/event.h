@@ -6,19 +6,19 @@
 namespace event {
 
 class IdGenerator {
-public:
+ public:
   inline static size_t nextId() {
     static std::atomic<uint64_t> id_generator_{0};
     return id_generator_.fetch_add(1, std::memory_order::relaxed);
   }
 };
 
-template <typename Derived> class EventBase : private IdGenerator {
-public:
+template <typename Derived>
+class EventBase : private IdGenerator {
+ public:
   typedef std::chrono::time_point<std::chrono::system_clock> DateTime;
 
-  explicit EventBase(
-      const DateTime &timestamp = std::chrono::system_clock::now())
+  explicit EventBase(const DateTime& timestamp = std::chrono::system_clock::now())
       : timestamp(timestamp) {}
 
   ~EventBase() = default;
@@ -28,8 +28,8 @@ public:
     return type_id;
   }
 
-public:
+ public:
   DateTime timestamp;
 };
 
-}; // namespace event
+};  // namespace event

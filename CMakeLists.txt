@@ -11,6 +11,19 @@ include(FetchContent)
 
 add_library(event STATIC)
 
+#Fu2
+FetchContent_Declare(
+        function2
+        GIT_REPOSITORY https://github.com/Naios/function2.git
+        GIT_TAG 4.1.0
+        GIT_SHALLOW TRUE
+)
+set(FUNCTION2_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(function2)
+target_link_libraries(event PUBLIC
+        function2::function2
+)
+
 # ASIO
 find_package(Threads REQUIRED)
 target_link_libraries(event PRIVATE Threads::Threads)
@@ -27,7 +40,7 @@ target_include_directories(event PUBLIC ${asio_standalone_SOURCE_DIR}/asio/inclu
 
 # SRC/HDR
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
-    "${CMAKE_CURRENT_SOURCE_DIR}/core/src/*.cpp"
+        "${CMAKE_CURRENT_SOURCE_DIR}/core/src/*.cpp"
 )
 
 file(GLOB_RECURSE PUBLIC_HEADERS CONFIGURE_DEPENDS
