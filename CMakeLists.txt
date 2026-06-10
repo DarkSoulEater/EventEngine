@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 option(BUILD_SANDBOX "Build sandbox executable" ON)
+option(BUILD_BENCHMARK "Build benchmark executable" ON)
 
 include(FetchContent)
 
@@ -23,6 +24,18 @@ FetchContent_MakeAvailable(function2)
 target_link_libraries(event PUBLIC
         function2::function2
 )
+
+# Google Benchmark
+set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "Disable building tests" FORCE)
+set(BENCHMARK_ENABLE_GTEST_TESTS OFF CACHE BOOL "Disable building gtest tests" FORCE)
+
+FetchContent_Declare(
+        benchmark
+        GIT_REPOSITORY https://github.com/google/benchmark.git
+        GIT_TAG v1.9.5
+        GIT_SHALLOW TRUE
+)
+FetchContent_MakeAvailable(benchmark)
 
 # ASIO
 find_package(Threads REQUIRED)
@@ -87,5 +100,27 @@ if (BUILD_SANDBOX)
     target_link_libraries(sandbox
             PRIVATE
             event
+    )
+endif ()
+
+# Perf test
+if (BUILD_BENCHMARK)
+    file(GLOB BENCHMARK_FILES CONFIGURE_DEPENDS
+            "${CMAKE_CURRENT_SOURCE_DIR}/benchmark/*.cpp"
+            "${CMAKE_CURRENT_SOURCE_DIR}/benchmark/*.h"
+            "${CMAKE_CURRENT_SOURCE_DIR}/benchmark/*.hpp"
+    )
+
+    add_executable(event-benchmark)
+
+    target_sources(event-benchmark
+            PRIVATE
+            ${BENCHMARK_FILES}
+    )
+
+    target_link_libraries(event-benchmark
+            PRIVATE
+            event
+            benchmark::benchmark
     )
 endif ()
