@@ -82,29 +82,41 @@ BENCHMARK(BM_DispatchMultipleHandlers)
     ->Args({1000, 8})
     ->Args({1000, 16});
 
-static void BM_DispatchSingleHandlerMT(benchmark::State& state) {
-  std::atomic<uint64_t> sink = 0;
+struct alignas(std::hardware_destructive_interference_size) Counter {
+  uint64_t count{0};
+};
+
+struct Counters {
+  Counter counter[8];
+};
+
+static void BM_SyncDispatchSingleHandlerMT(benchmark::State& state) {
+  static Counters counters;
 
   if (state.thread_index() == 0) {
-    syncSubscribe<PerfEvent>([&sink](const PerfEvent& evt) {
-      sink.fetch_add(evt.id + 2, std::memory_order_relaxed);
+    syncSubscribe<PerfEvent>([](const PerfEvent& evt) {
+      counters.counter[evt.id].count += static_cast<size_t>(evt.metric);
     });
   }
 
+  const auto thread_id = state.thread_index();
+
   for (auto _ : state) {
-    dispatch<PerfEvent>(1, 2.71828);
+    for (size_t k = 0; k < 10000; ++k) {
+      dispatch<PerfEvent>(thread_id, 2.0);
+    }
   }
 
-  // if (sink != state.iterations() * PerfEvent::getTypeId()) {
-  //   std::abort();
-  // }
+  benchmark::DoNotOptimize(counters);
 
-  benchmark::DoNotOptimize(sink);
   if (state.thread_index() == 0) {
     detail::clearHandlers();
   }
 }
-BENCHMARK(BM_DispatchSingleHandlerMT)->ThreadRange(1, 16);
+BENCHMARK(BM_SyncDispatchSingleHandlerMT)
+    ->ThreadRange(1, 8)
+    ->MeasureProcessCPUTime()
+    ->UseRealTime();
 
 // //
 // //// Бенчмарк 4.4: Аллокация через пул vs new/delete
@@ -163,6 +175,3 @@ BENCHMARK(BM_DispatchSingleHandlerMT)->ThreadRange(1, 16);
 // //}
 
 }  // namespace event::test
-//
-// // Регистрация бенчмарков
-// // BENCHMARK_MAIN();
