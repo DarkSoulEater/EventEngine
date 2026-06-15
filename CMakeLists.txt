@@ -33,9 +33,9 @@ FetchContent_Declare(
 )
 
 FetchContent_GetProperties(boost_headers)
-if(NOT boost_headers_POPULATED)
+if (NOT boost_headers_POPULATED)
     FetchContent_Populate(boost_headers)
-endif()
+endif ()
 
 target_include_directories(event PUBLIC ${boost_headers_SOURCE_DIR})
 
@@ -49,6 +49,15 @@ fetchContent_Declare(
 
 FetchContent_MakeAvailable(eventpp)
 target_link_libraries(event PUBLIC eventpp::eventpp)
+
+#Sigslot
+FetchContent_Declare(
+        sigslot
+        GIT_REPOSITORY https://github.com/palacaze/sigslot
+        GIT_TAG v1.2.3
+)
+FetchContent_MakeAvailable(sigslot)
+target_link_libraries(event PUBLIC Pal::Sigslot)
 
 # Libuv
 set(BUILD_TESTING OFF CACHE BOOL "Disable libuv tests" FORCE)
