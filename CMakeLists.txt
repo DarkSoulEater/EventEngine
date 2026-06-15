@@ -25,6 +25,45 @@ target_link_libraries(event PUBLIC
         function2::function2
 )
 
+# Boost
+#FetchContent_Declare(
+#        boost_headers
+#        URL https://archives.boost.io/release/1.84.0/source/boost_1_84_0.tar.gz
+#        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+#)
+#
+#FetchContent_GetProperties(boost_headers)
+#if(NOT boost_headers_POPULATED)
+#    FetchContent_Populate(boost_headers)
+#endif()
+#
+#target_include_directories(event PRIVATE ${boost_headers_SOURCE_DIR})
+
+# Eventpp
+fetchContent_Declare(
+        eventpp
+        GIT_REPOSITORY https://github.com/wqking/eventpp.git
+        GIT_TAG v0.1.3
+        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+)
+
+FetchContent_MakeAvailable(eventpp)
+target_link_libraries(event PUBLIC eventpp::eventpp)
+
+# Libuv
+set(BUILD_TESTING OFF CACHE BOOL "Disable libuv tests" FORCE)
+FetchContent_Declare(
+        libuv
+        GIT_REPOSITORY https://github.com/libuv/libuv.git
+        GIT_TAG v1.48.0
+        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+)
+FetchContent_MakeAvailable(libuv)
+
+# Если вам нужна динамическая (.so/.dll), используйте таргет 'uv'
+# и добавьте set(BUILD_SHARED_LIBS ON) перед FetchContent_MakeAvailable.
+target_link_libraries(event PUBLIC uv_a)
+
 # Google Benchmark
 set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "Disable building tests" FORCE)
 set(BENCHMARK_ENABLE_GTEST_TESTS OFF CACHE BOOL "Disable building gtest tests" FORCE)

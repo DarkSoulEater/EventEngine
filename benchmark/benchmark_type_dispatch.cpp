@@ -1,134 +1,159 @@
-#include <benchmark/benchmark.h>
-#include <vector>
-#include <typeinfo>
 #include <cstdint>
 #include <memory>
+#include <random>
+#include <typeinfo>
+#include <vector>
 
-// ============================================================================
-// 1. Подход на базе RTTI (typeid)
-// ============================================================================
-struct RTTIBase {
-  virtual ~RTTIBase() = default;
-  int64_t payload = 0;
+#include <benchmark/benchmark.h>
+
+// ========================================================================
+// 1. Подход RTTI (typeid)
+// ========================================================================
+struct RTTI_Base {
+  virtual ~RTTI_Base() = default;
+};
+struct RTTI_Event : RTTI_Base {
+  int a = 10;
+};
+struct RTTI_Event1 : RTTI_Base {
+  int a = 13;
+};
+struct RTTI_Event2 : RTTI_Base {
+  int a = 12;
+};
+struct RTTI_Event3 : RTTI_Base {
+  int a = 11;
 };
 
-struct RTTIEvent : RTTIBase {
-  static constexpr const char* name() { return "RTTIEvent"; }
+// ========================================================================
+// 2. Подход виртуальных функций (virtual getTypeId)
+// ========================================================================
+struct Virt_Base {
+  virtual size_t getTypeId() const = 0;
+  virtual ~Virt_Base()             = default;
+};
+struct Virt_Event : Virt_Base {
+  size_t getTypeId() const override { return 1; }
+};
+struct Virt_Event1 : Virt_Base {
+  size_t getTypeId() const override { return 2; }
+};
+struct Virt_Event2 : Virt_Base {
+  size_t getTypeId() const override { return 3; }
+};
+struct Virt_Event3 : Virt_Base {
+  size_t getTypeId() const override { return 4; }
 };
 
-// ============================================================================
-// 2. Подход на базе виртуальных функций (динамическая диспетчеризация)
-// ============================================================================
-struct VirtBase {
-  virtual void handle() = 0;
-  virtual ~VirtBase() = default;
-  int64_t payload = 0;
-};
-
-struct VirtEvent : VirtBase {
-  void handle() override {
-    benchmark::DoNotOptimize(payload);
-  }
-};
-
-// ============================================================================
-// 3. CRTP + статическая линейная идентификация (предлагаемый подход)
-// ============================================================================
-struct IdGenerator {
-  static std::size_t next() {
-    static std::size_t counter = 0;
-    return counter++;
+// ========================================================================
+// 3. Подход CRTP (статическая идентификация)
+// ========================================================================
+class IdGenerator {
+ public:
+  inline static size_t nextId() {
+    static std::atomic<uint64_t> id_generator_{0};
+    return id_generator_.fetch_add(1, std::memory_order::relaxed);
   }
 };
 
 template <typename Derived>
-struct CRTPBase {
-  static std::size_t typeId() noexcept {
-    static const std::size_t id = IdGenerator::next();
-    return id;
+class EventBase : private IdGenerator {
+ public:
+  explicit EventBase() {}
+
+  ~EventBase() = default;
+
+  inline static size_t getTypeId() {
+    static const size_t type_id = nextId();
+    return type_id;
   }
 };
 
-struct CRTPEvent : CRTPBase<CRTPEvent> {
-  int64_t payload = 0;
+struct CRTP_Event : EventBase<CRTP_Event> {
+  int a = 1;
 };
 
-// Имитация обработчика в таблице маршрутизации
-static void crtp_handler(const CRTPEvent* evt) {
-  benchmark::DoNotOptimize(evt->payload);
-}
+struct CRTP_Event1 : EventBase<CRTP_Event1> {
+  int a = 1;
+};
 
-// ============================================================================
+struct CRTP_Event2 : EventBase<CRTP_Event2> {
+  int a = 1;
+};
+
+struct CRTP_Event3 : EventBase<CRTP_Event3> {
+  int a = 1;
+};
+
+// ========================================================================
 // Бенчмарки
-// ============================================================================
-constexpr int kEventCount = 100'000;
+// ========================================================================
 
-// 1. Измерение накладных расходов typeid
-static void BM_Identify_typeid(benchmark::State& state) {
-  std::vector<RTTIBase*> events(state.range(0));
-  for (auto& e : events) e = new RTTIEvent();
-    
-  const std::type_info& target = typeid(RTTIEvent);
-  volatile std::size_t matched = 0;
+// 1. Измерение задержки typeid().hash_code()
+static void BM_GetId_RTTI(benchmark::State& state) {
+  const size_t            n = state.range(0);
+  std::vector<RTTI_Base*> objects;
 
-  for (auto _ : state) {
-    for (const auto* e : events) {
-      if (typeid(*e) == target) {
-        benchmark::DoNotOptimize(++matched);
-      }
-    }
+  objects.reserve(n);
+  for (size_t k = 0; k < n; ++k) {
+    objects.push_back(new RTTI_Event());
   }
-    
-  for (auto* e : events) delete e;
-}
 
-// 2. Измерение накладных расходов виртуального вызова
-static void BM_Dispatch_virtual(benchmark::State& state) {
-  std::vector<VirtBase*> events(state.range(0));
-  for (auto& e : events) e = new VirtEvent();
+  // Целевой type_info для сравнения (эмулирует поиск в реестре)
+  const std::type_info& target = typeid(RTTI_Event);
 
   for (auto _ : state) {
-    for (auto* e : events) {
-      e->handle();
+    for (size_t i = 0; i < n; ++i) {
+      // typeid требует разыменования vptr, обращения к метаданным и хеширования
+      benchmark::DoNotOptimize(typeid(*objects[i]).hash_code());
     }
   }
 
-  for (auto* e : events) delete e;
+  for (auto* p : objects)
+    delete p;
+  state.SetItemsProcessed(state.iterations() * n);
 }
 
-// 3. Измерение накладных расходов CRTP-маршрутизации
-static void BM_Dispatch_crtp(benchmark::State& state) {
-  std::vector<CRTPEvent*> events(state.range(0));
-  for (auto& e : events) e = new CRTPEvent();
-    
-  // Имитация получения указателя из таблицы обработчиков по type_id
-  using HandlerPtr = void(*)(const CRTPEvent*);
-  HandlerPtr handler = crtp_handler;
+// 2. Измерение задержки виртуального вызова getTypeId()
+static void BM_GetId_Virtual(benchmark::State& state) {
+  const size_t            n = state.range(0);
+  std::vector<Virt_Base*> objects;
+
+  objects.reserve(n);
+  for (size_t k = 0; k < n; ++k) {
+    objects.push_back(new Virt_Event());
+  }
 
   for (auto _ : state) {
-    for (const auto* e : events) {
-      handler(e);
+    for (size_t i = 0; i < n; ++i) {
+      // Косвенный вызов через vtable + возврат константы
+      benchmark::DoNotOptimize(objects[i]->getTypeId());
     }
   }
 
-  for (auto* e : events) delete e;
+  for (auto* p : objects)
+    delete p;
+  state.SetItemsProcessed(state.iterations() * n);
 }
 
-// 4. Измерение скорости получения идентификатора типа
-static void BM_GetTypeId_runtime(benchmark::State& state) {
-  // Предварительная инициализация статической переменной
-  [[maybe_unused]] std::size_t dummy = CRTPEvent::typeId();
-    
-  volatile std::size_t sink = 0;
+// 3. Измерение задержки CRTP-идентификации
+static void BM_GetId_CRTP(benchmark::State& state) {
+  const size_t n = state.range(0);
+
+  // CRTP не требует динамического выделения, используем простой цикл
+  volatile size_t sink = 0;
   for (auto _ : state) {
-    benchmark::DoNotOptimize(sink = CRTPEvent::typeId());
+    for (size_t i = 0; i < n; ++i) {
+      // Статический вызов: компилятор подставляет константу или загружает из .rodata
+      benchmark::DoNotOptimize(sink = CRTP_Event::getTypeId());
+    }
   }
+  state.SetItemsProcessed(state.iterations() * n);
 }
 
-// Регистрация бенчмарков
-BENCHMARK(BM_Identify_typeid)->Arg(kEventCount)->Unit(benchmark::kMicrosecond);
-BENCHMARK(BM_Dispatch_virtual)->Arg(kEventCount)->Unit(benchmark::kMicrosecond);
-BENCHMARK(BM_Dispatch_crtp)->Arg(kEventCount)->Unit(benchmark::kMicrosecond);
-BENCHMARK(BM_GetTypeId_runtime)->Iterations(1000000)->Unit(benchmark::kNanosecond);
+// Регистрация бенчмарков с различными объёмами данных
+// BENCHMARK(BM_GetId_RTTI)->RangeMultiplier(4)->Range(256, 65536)->Unit(benchmark::kNanosecond);
+// BENCHMARK(BM_GetId_Virtual)->RangeMultiplier(4)->Range(256, 65536)->Unit(benchmark::kNanosecond);
+// BENCHMARK(BM_GetId_CRTP)->RangeMultiplier(4)->Range(256, 65536)->Unit(benchmark::kNanosecond);
 
 BENCHMARK_MAIN();

@@ -3,6 +3,9 @@
 #include <atomic>
 #include <chrono>
 
+#include "exe/run.h"
+#include "handler.h"
+
 namespace event {
 
 class IdGenerator {
@@ -18,8 +21,7 @@ class EventBase : private IdGenerator {
  public:
   typedef std::chrono::time_point<std::chrono::system_clock> DateTime;
 
-  explicit EventBase(const DateTime& timestamp = std::chrono::system_clock::now())
-      : timestamp(timestamp) {}
+  explicit EventBase(const DateTime& timestamp = {}) : timestamp(timestamp) {}
 
   ~EventBase() = default;
 
@@ -31,5 +33,30 @@ class EventBase : private IdGenerator {
  public:
   DateTime timestamp;
 };
+
+template <typename EventType, typename... Args>
+void dispatch(Args&&... args) {
+  const size_t id       = EventType::getTypeId();
+  auto&        handlers = detail::handlerStorage();
+
+  // Cpu-bound
+  auto& sync = handlers.sync;
+  if (id < sync.size()) {
+    EventType event(std::forward<Args>(args)...);
+    for (auto& handler : sync[id]) {
+      handler.handle(&event);
+    }
+  }
+
+  // IO-bound
+  auto& async = handlers.async;
+  if (id < async.size() && !async[id].empty()) {
+    exe::Run([&, event = EventType(std::forward<Args>(args)...)] {
+      for (auto& handler : async[id]) {
+        handler.handle(&event);
+      }
+    });
+  }
+}
 
 };  // namespace event
