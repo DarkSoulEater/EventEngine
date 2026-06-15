@@ -1,3 +1,5 @@
+#include <boost/signals2.hpp>
+
 #include <benchmark/benchmark.h>
 #include <event/event.h>
 #include <event/handler.h>
@@ -78,5 +80,29 @@ static void BM_C_DispatchSingleHandlersEvent(benchmark::State& state) {
 }
 }  // namespace evpp
 
+// Boost
+namespace boost_test {
+
+struct Event {
+  uint64_t size;
+  uint64_t time;
+};
+
+static void BM_C_DispatchSingleHandlersEvent(benchmark::State& state) {
+  uint64_t sum = 0;
+
+  boost::signals2::signal<void(const Event&)> signal;
+  auto connect = signal.connect([&](const Event& e) { sum += e.size * e.time; });
+
+  for (auto _ : state) {
+    signal({1, 2});
+  }
+
+  benchmark::DoNotOptimize(sum);
+}
+
+}  // namespace boost_test
+
 BENCHMARK(event::test::BM_C_DispatchSingleHandlersEvent);
 BENCHMARK(evpp::BM_C_DispatchSingleHandlersEvent);
+BENCHMARK(boost_test::BM_C_DispatchSingleHandlersEvent);

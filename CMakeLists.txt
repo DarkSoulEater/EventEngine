@@ -26,18 +26,18 @@ target_link_libraries(event PUBLIC
 )
 
 # Boost
-#FetchContent_Declare(
-#        boost_headers
-#        URL https://archives.boost.io/release/1.84.0/source/boost_1_84_0.tar.gz
-#        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
-#)
-#
-#FetchContent_GetProperties(boost_headers)
-#if(NOT boost_headers_POPULATED)
-#    FetchContent_Populate(boost_headers)
-#endif()
-#
-#target_include_directories(event PRIVATE ${boost_headers_SOURCE_DIR})
+FetchContent_Declare(
+        boost_headers
+        URL https://archives.boost.io/release/1.84.0/source/boost_1_84_0.tar.gz
+        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+)
+
+FetchContent_GetProperties(boost_headers)
+if(NOT boost_headers_POPULATED)
+    FetchContent_Populate(boost_headers)
+endif()
+
+target_include_directories(event PUBLIC ${boost_headers_SOURCE_DIR})
 
 # Eventpp
 fetchContent_Declare(
