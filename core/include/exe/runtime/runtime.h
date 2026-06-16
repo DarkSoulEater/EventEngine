@@ -13,4 +13,8 @@ static inline void Stop() {
   AsioRuntime::stop();
 }
 
+static inline void Wait() {
+  AsioRuntime::wait();
+}
+
 }  // namespace exe::runtime::detail

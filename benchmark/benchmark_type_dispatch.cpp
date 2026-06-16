@@ -152,8 +152,8 @@ static void BM_GetId_CRTP(benchmark::State& state) {
 }
 
 // Регистрация бенчмарков с различными объёмами данных
-// BENCHMARK(BM_GetId_RTTI)->RangeMultiplier(4)->Range(256, 65536)->Unit(benchmark::kNanosecond);
-// BENCHMARK(BM_GetId_Virtual)->RangeMultiplier(4)->Range(256, 65536)->Unit(benchmark::kNanosecond);
-// BENCHMARK(BM_GetId_CRTP)->RangeMultiplier(4)->Range(256, 65536)->Unit(benchmark::kNanosecond);
+ BENCHMARK(BM_GetId_RTTI)->RangeMultiplier(4)->Range(256, 65536)->Unit(benchmark::kNanosecond);
+ BENCHMARK(BM_GetId_Virtual)->RangeMultiplier(4)->Range(256, 65536)->Unit(benchmark::kNanosecond);
+ BENCHMARK(BM_GetId_CRTP)->RangeMultiplier(4)->Range(256, 65536)->Unit(benchmark::kNanosecond);
 
 BENCHMARK_MAIN();

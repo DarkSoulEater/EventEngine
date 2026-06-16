@@ -36,7 +36,46 @@ void Asio() {
   std::cout << "[Main] Готово.\n";
 }
 
+struct TimeEvent : public event::EventBase<TimeEvent> {
+  using Time = decltype(std::chrono::high_resolution_clock::now());
+  Time     start;
+  uint64_t id;
+
+  TimeEvent(Time start, uint64_t id) : start(start), id(id) {}
+};
+
+struct alignas(std::hardware_destructive_interference_size) Counter {
+  uint64_t count;
+};
+
+struct Counters {
+  Counter counters[100];
+};
+
+static Counters counters;
+
+void TimeBench() {
+  event::asyncSubscribe<TimeEvent>([](const TimeEvent& e) {
+    auto end = std::chrono::high_resolution_clock::now();
+    auto dt  = std::chrono::duration<uint64_t, std::nano>(end - e.start).count();
+    counters.counters[e.id].count = dt;
+  });
+
+  std::this_thread::sleep_for(std::chrono::seconds(10));
+
+  for (size_t i = 0; i < 1; ++i) {
+    event::dispatch<TimeEvent>(TimeEvent{std::chrono::high_resolution_clock::now(), i});
+  }
+
+  exe::Wait();
+  for (size_t k = 0; k < 100; ++k) {
+    std::cout << counters.counters[k].count << "\n";
+  }
+}
+
 int main() {
+  TimeBench();
+  return 0;
   Asio();
 
   std::cout << "Hello world\n";

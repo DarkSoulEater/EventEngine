@@ -21,6 +21,12 @@ struct PerfEvent : public EventBase<PerfEvent> {
   PerfEvent(uint64_t i, double m) : id(i), metric(m) {}
 };
 
+struct PromiseEvent : public EventBase<PromiseEvent> {
+  mutable std::promise<void> p;
+
+  explicit PromiseEvent(std::promise<void> p) : p(std::move(p)) {}
+};
+
 // Бенчмарк 4.1: Скорость диспетчеризации без обработчиков
 static void BM_DispatchNoHandlers(benchmark::State& state) {
   for (auto _ : state) {
@@ -117,6 +123,56 @@ BENCHMARK(BM_SyncDispatchSingleHandlerMT)
     ->ThreadRange(1, 8)
     ->MeasureProcessCPUTime()
     ->UseRealTime();
+
+static void BM_SyncAndAsyncCompareSync(benchmark::State& state) {
+  static Counters counters;
+
+  syncSubscribe<PerfEvent>([](const PerfEvent& evt) {
+    counters.counter[evt.id].count += static_cast<size_t>(evt.metric);
+  });
+
+  const auto thread_id = state.thread_index();
+
+  for (auto _ : state) {
+    for (size_t k = 0; k < 10000; ++k) {
+      dispatch<PerfEvent>(thread_id, 2.0);
+    }
+  }
+
+  benchmark::DoNotOptimize(counters);
+
+  detail::clearHandlers();
+}
+
+static void BM_SyncAndAsyncCompareAsync(benchmark::State& state) {
+  static Counters counters;
+
+  asyncSubscribe<PerfEvent>([](const PerfEvent& evt) {
+    auto val = evt.id * (evt.metric + 1);
+    benchmark::DoNotOptimize(val);
+    //    counters.counter[evt.id].count += static_cast<size_t>(evt.metric);
+  });
+
+  asyncSubscribe<PromiseEvent>([](const PromiseEvent& evt) { evt.p.set_value(); });
+
+  for (auto _ : state) {
+    std::promise<void> p;
+
+    auto f = p.get_future();
+//    for (size_t k = 0; k < 100000; ++k) {
+//      dispatch<PerfEvent>(1, 2);
+//    }
+    dispatch<PromiseEvent>(std::move(p));
+
+    //    dispatch<PromiseEvent>(std::move(p));
+    f.wait();
+  }
+
+  benchmark::DoNotOptimize(counters);
+
+  detail::clearHandlers();
+}
+BENCHMARK(BM_SyncAndAsyncCompareAsync);
 
 // //
 // //// Бенчмарк 4.4: Аллокация через пул vs new/delete

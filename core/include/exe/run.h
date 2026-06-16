@@ -12,4 +12,8 @@ void Run(F&& callable) {
 static inline void Stop() {
   runtime::detail::Stop();
 }
+
+static inline void Wait() {
+  runtime::detail::Wait();
+}
 }  // namespace exe

@@ -11,9 +11,9 @@ class AsioRuntime {
     asio::post(thread_pool_, std::forward<F>(callable));
   }
 
-  static void stop() {
-    thread_pool_.join();
-  }
+  static void stop() { thread_pool_.join(); }
+
+  static void wait() { thread_pool_.wait(); }
 
  private:
   static asio::thread_pool thread_pool_;

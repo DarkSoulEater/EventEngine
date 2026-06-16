@@ -51,7 +51,8 @@ void dispatch(Args&&... args) {
   // IO-bound
   auto& async = handlers.async;
   if (id < async.size() && !async[id].empty()) {
-    exe::Run([&, event = EventType(std::forward<Args>(args)...)] {
+    exe::Run([id, event = EventType(std::forward<Args>(args)...)] {
+      auto& async = detail::handlerStorage().async;
       for (auto& handler : async[id]) {
         handler.handle(&event);
       }

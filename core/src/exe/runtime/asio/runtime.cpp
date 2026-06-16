@@ -2,6 +2,6 @@
 
 namespace exe::runtime::detail {
 
-asio::thread_pool AsioRuntime::thread_pool_{4};
+asio::thread_pool AsioRuntime::thread_pool_{1};
 
 }  // namespace exe::runtime::detail

@@ -69,13 +69,13 @@ void asyncSubscribe(Callback&& callback) {
   auto& storage = detail::handlerStorage();
   auto& async   = storage.async;
 
-  constexpr size_t id = EventType::getTypeId();
+  const size_t id = EventType::getTypeId();
 
   if (async.size() <= id) {
     async.resize(id + 1);
   }
 
-  async[id].emplace_back(std::forward<Callback>(callback));
+  async[id].emplace_back(std::type_identity<EventType>{}, std::forward<Callback>(callback));
 }
 
 }  // namespace event
