@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.10)  17 JUN 2026 17:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.10)  17 JUN 2026 18:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1423,11 +1423,6 @@ Overfull \hbox (2.17009pt too wide) in paragraph at lines 21--22
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 29.
  [11] [12] [13]
-
-LaTeX Warning: Citation `meyers2014effective' on page 14 undefined on input lin
-e 145.
-
-
 Overfull \hbox (15.24399pt too wide) in paragraph at lines 154--155
 \T2A/cmr/m/n/12 иден-ти-фи-ка-то-ров на уровне си-сте-мы ти-пов C++. По-сколь-к
 у шаб-лон-ный па-ра-метр \T2A/cmtt/m/n/12 Derived
@@ -1534,17 +1529,14 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 82D82279D2B6BD61D7F708A9F6DA07AF;13555.
  ) 
 Here is how much of TeX's memory you used:
- 33514 strings out of 475656
- 623891 string characters out of 5787141
+ 33515 strings out of 475656
+ 623897 string characters out of 5787141
  2006975 words of memory out of 5000000
  54628 multiletter control sequences out of 15000+600000
  580057 words of font info for 91 fonts, out of 8000000 for 9000
@@ -1563,10 +1555,10 @@ hare/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/typ
 e1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
 fti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/sh
 are/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on thesis.pdf (31 pages, 459081 bytes).
+Output written on thesis.pdf (31 pages, 459000 bytes).
 PDF statistics:
- 689 PDF objects out of 1000 (max. 8388607)
- 625 compressed objects within 7 object streams
- 225 named destinations out of 1000 (max. 500000)
+ 691 PDF objects out of 1000 (max. 8388607)
+ 627 compressed objects within 7 object streams
+ 226 named destinations out of 1000 (max. 500000)
  398 words of extra memory for PDF output out of 10000 (max. 10000000)
 

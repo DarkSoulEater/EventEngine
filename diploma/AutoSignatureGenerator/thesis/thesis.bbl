@@ -142,6 +142,13 @@ Guntheroth~Kurt. Optimized C++: Proven Techniques for Heightened Performance.
 \newblock O'Reilly Media, 2016. \BibDash
 \newblock Discussion on RTTI and dynamic\_cast performance overheads.
 
+\bibitem{iso2011cpp}
+\selectlanguageifdefined{english}
+{ISO/IEC}. Programming Languages — C++. \BibDash
+\newblock 2011. \BibDash
+\newblock Section 6.7 [stmt.dcl] paragraph 4: Thread-safe initialization of
+  local static variables.
+
 \bibitem{googlebenchmark}
 \selectlanguageifdefined{english}
 {Google Benchmark Authors}. Google Benchmark: A microbenchmark support library.

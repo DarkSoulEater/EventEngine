@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex thesis"] 1781707656.40095 "thesis.aux" "thesis.bbl" "thesis" 1781707656.44283 2
-  "./references.bib" 1781707508.34473 4836 cc3d698610c861cadaceb2e23f9054b0 ""
+["bibtex thesis"] 1781709170.4133 "thesis.aux" "thesis.bbl" "thesis" 1781709344.63425 2
+  "./references.bib" 1781709064.81752 5122 c33448cc5bad0b9e4646be86cb0d6fd9 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/gost/ugost2008l.bst" 1612473987 61784 d36b85ff0e0d3560e23c3f3a0083546c ""
-  "thesis.aux" 1781707656.14954 16169 863efb2287400f2b5b0b536360ea5b48 "pdflatex"
+  "thesis.aux" 1781709344.38206 16185 839c0157c8ff83f1b4228873593ccd93 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1781707655.20781 "thesis.tex" "thesis.pdf" "thesis" 1781707656.44298 0
+["pdflatex"] 1781709343.40844 "thesis.tex" "thesis.pdf" "thesis" 1781709344.6344 0
   "../images/MIPT_logo.jpg" 1781100683.34325 39784 afc12763e98e71a484f4615f4a520086 ""
   "/etc/texmf/web2c/texmf.cnf" 1781092717.49266 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/timofey/.texlive2023/texmf-var/fonts/tfm/lh/lh-t2a/labx1000.tfm" 1781705081.27356 3300 6abb8e321227ead2a8e929e5abc72bd3 ""
@@ -272,14 +272,14 @@
   "include/title.tex" 1781100683.34968 1862 fbad73da087f561c605ea564ea65b3a9 ""
   "parts/Section0.tex" 1781629011.33818 7662 a330ca45e0dfa112f9d735ae56d1d8f0 ""
   "parts/Section1.tex" 1781707614.0726 13686 1206ebe278c493ceab5a1cb27d8f506a ""
-  "parts/Section2_BuildSolution.tex" 1781705972.26216 58916 8a01c9a9db0ce79003768b6eb0a6f995 ""
+  "parts/Section2_BuildSolution.tex" 1781709342.52706 58909 cef034a87a84fb9334905250b7862aaa ""
   "parts/Section3.tex" 1781707238.55807 21286 ce1a859ed3e806dbd6d9ca67a053bc7d ""
   "parts/Section4.tex" 1781707403.83086 4938 8b146662ea44189144a1ff92f7883bf2 ""
-  "thesis.aux" 1781707656.14954 16169 863efb2287400f2b5b0b536360ea5b48 "pdflatex"
-  "thesis.bbl" 1781707656.44054 6002 fcbdc078e70986647a591a448906e7a2 "bibtex thesis"
-  "thesis.out" 1781707656.15154 13555 82d82279d2b6bd61d7f708a9f6da07af "pdflatex"
-  "thesis.tex" 1781707653.99355 1123 197b65dd68271ce07159fd35e0c28894 ""
-  "thesis.toc" 1781707656.15154 5797 9c51aec4bac5be7a4ddc1a36e036370a "pdflatex"
+  "thesis.aux" 1781709344.38206 16185 839c0157c8ff83f1b4228873593ccd93 "pdflatex"
+  "thesis.bbl" 1781709170.46834 6236 f0df6db79dfc4f5183dcfc171f568054 "bibtex thesis"
+  "thesis.out" 1781709344.38306 13555 82d82279d2b6bd61d7f708a9f6da07af "pdflatex"
+  "thesis.tex" 1781709168.10735 1123 197b65dd68271ce07159fd35e0c28894 ""
+  "thesis.toc" 1781709344.38306 5797 9c51aec4bac5be7a4ddc1a36e036370a "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.log"
