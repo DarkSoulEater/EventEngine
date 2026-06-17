@@ -9,6 +9,10 @@ void Run(F&& callable) {
   runtime::detail::Submit(std::forward<F>(callable));
 }
 
+static inline void Start() {
+  runtime::detail::Start();
+}
+
 static inline void Stop() {
   runtime::detail::Stop();
 }

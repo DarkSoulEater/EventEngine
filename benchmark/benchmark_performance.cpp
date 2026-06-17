@@ -7,6 +7,7 @@
 #include <benchmark/benchmark.h>
 #include <event/event.h>
 #include <event/handler.h>
+#include <exe/thread/wait_group.h>
 
 namespace event::test {
 
@@ -25,6 +26,12 @@ struct PromiseEvent : public EventBase<PromiseEvent> {
   mutable std::promise<void> p;
 
   explicit PromiseEvent(std::promise<void> p) : p(std::move(p)) {}
+};
+
+struct WGEvent : public EventBase<WGEvent> {
+  exe::thread::WaitGroup& wg;
+
+  explicit WGEvent(exe::thread::WaitGroup& wg) : wg(wg) {}
 };
 
 // Бенчмарк 4.1: Скорость диспетчеризации без обработчиков
@@ -124,19 +131,29 @@ BENCHMARK(BM_SyncDispatchSingleHandlerMT)
     ->MeasureProcessCPUTime()
     ->UseRealTime();
 
+constexpr size_t kIterCount = 10000000;
+
 static void BM_SyncAndAsyncCompareSync(benchmark::State& state) {
   static Counters counters;
 
   syncSubscribe<PerfEvent>([](const PerfEvent& evt) {
-    counters.counter[evt.id].count += static_cast<size_t>(evt.metric);
+    auto val = evt.id * (evt.metric + 1);
+    benchmark::DoNotOptimize(val);
+    //    counters.counter[evt.id].count += static_cast<size_t>(evt.metric);
   });
 
-  const auto thread_id = state.thread_index();
+  syncSubscribe<WGEvent>([](const WGEvent& e) { e.wg.done(); });
 
   for (auto _ : state) {
-    for (size_t k = 0; k < 10000; ++k) {
-      dispatch<PerfEvent>(thread_id, 2.0);
+    exe::thread::WaitGroup wg;
+
+    wg.add(1);
+    for (size_t k = 0; k < kIterCount; ++k) {
+      dispatch<PerfEvent>(1, 2);
     }
+    dispatch<WGEvent>(wg);
+
+    wg.wait();
   }
 
   benchmark::DoNotOptimize(counters);
@@ -153,25 +170,26 @@ static void BM_SyncAndAsyncCompareAsync(benchmark::State& state) {
     //    counters.counter[evt.id].count += static_cast<size_t>(evt.metric);
   });
 
-  asyncSubscribe<PromiseEvent>([](const PromiseEvent& evt) { evt.p.set_value(); });
+  asyncSubscribe<WGEvent>([](const WGEvent& e) { e.wg.done(); });
 
   for (auto _ : state) {
-    std::promise<void> p;
+    exe::thread::WaitGroup wg;
 
-    auto f = p.get_future();
-//    for (size_t k = 0; k < 100000; ++k) {
-//      dispatch<PerfEvent>(1, 2);
-//    }
-    dispatch<PromiseEvent>(std::move(p));
+    wg.add(1);
+    for (size_t k = 0; k < kIterCount; ++k) {
+      dispatch<PerfEvent>(1, 2);
+    }
+    dispatch<WGEvent>(wg);
 
-    //    dispatch<PromiseEvent>(std::move(p));
-    f.wait();
+    wg.wait();
   }
 
   benchmark::DoNotOptimize(counters);
 
   detail::clearHandlers();
 }
+
+BENCHMARK(BM_SyncAndAsyncCompareSync);
 BENCHMARK(BM_SyncAndAsyncCompareAsync);
 
 // //

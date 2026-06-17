@@ -67,6 +67,14 @@ Stroustrup~Bjarne. The C++ Programming Language. \BibDash
 Eventpp C++ Event Dispatcher and Callback Library. \BibDash
 \newblock \url{https://github.com/wqking/eventpp}.
 
+\bibitem{sigslot_modern}
+\selectlanguageifdefined{english}
+Lacaze~Pierre-Antoine. sigslot: A C++ Signal/Slot library. \BibDash
+\newblock \url{https://github.com/palacaze/sigslot}. \BibDash
+\newblock 2019. \BibDash
+\newblock Accessed: 2026-06-17. Modern header-only C++17 signal/slot library
+  with zero-overhead design.
+
 \bibitem{realtime2021gc}
 \selectlanguageifdefined{english}
 Group~Real-Time Systems~Research. Garbage Collection Overhead in Low-Latency
@@ -142,10 +150,5 @@ Guntheroth~Kurt. Optimized C++: Proven Techniques for Heightened Performance.
 \newblock 2024. \BibDash
 \newblock Accessed: 2026-06-17. Provides a framework for measuring the
   performance of C++ code snippets.
-
-\bibitem{libuv2023doc}
-\selectlanguageifdefined{english}
-Contributors~Libuv. Libuv: Cross-platform Asynchronous I/O. \BibDash
-\newblock \url{https://libuv.org/}.
 
 \end{thebibliography}
