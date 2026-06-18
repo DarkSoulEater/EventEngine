@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1}Введение}{4}{section.1}%
 \contentsline {section}{\numberline {2}Обзор существующих решений}{6}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Анализаторы сетевого трафика}{6}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Ntopng}{6}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}ntopng}{6}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}Suricata}{6}{subsubsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.3}Zeek}{7}{subsubsection.2.1.3}%
 \contentsline {subsubsection}{\numberline {2.1.4}Итоговый анализ анализаторов}{7}{subsubsection.2.1.4}%
